@@ -43,6 +43,9 @@ header{
     align-items: center;
     border-bottom: 2px solid $main-color;
     box-shadow:  0px 4px 4px rgba(0, 0, 0, 0.25);
+    // position: sticky;
+    // top: 0;
+    // z-index: 4;
 }
 
 .nav{
@@ -89,6 +92,7 @@ header{
     display: flex;
     justify-content: space-between;
     gap: 129px;
+    margin-bottom: 220px;
 }
 
 .main-foto {
@@ -145,7 +149,7 @@ header{
 
 }
 
-#site-main-text-actions-reserve{
+.site-main-text-actions-reserve{
     font-family: Viaoda;
     font-size: 24px;
     color: $main-color;
@@ -155,16 +159,19 @@ header{
     border: none;
 }
 
-#site-main-text-actions-call{
-    @extend #site-main-text-actions-reserve;
+.site-main-text-actions-call{
+    @extend .site-main-text-actions-reserve;
     background: transparent;
     border: #fff 3px solid;
     padding: 15px 25px;
 }
 
+.container-background{
+    background-color: $background-color;
+}
 
 .about-us{
-    padding: 220px 0;
+    padding-bottom: 220px;
     text-align: center;
     background: $background-color;
 }
@@ -190,7 +197,7 @@ header{
 .about-us-items{
     display: flex;
     justify-content: center;
-    gap: 83px;
+    gap: 81px;
     margin-top: 182px;
 
 }
@@ -202,6 +209,11 @@ header{
     color: $main-color;
     align-content: center;
     text-align: start;
+}
+
+
+.image-placeholder img{
+    border: $main-color 2px solid;
 }
 
 .image-border{
@@ -227,7 +239,7 @@ header{
     text-align: center;
     margin-top: 124px;
     padding: 20px 121px;
-    @extend #site-main-text-actions-reserve;
+    @extend .site-main-text-actions-reserve;
 
 }
 
@@ -250,7 +262,7 @@ header{
     display: flex;
     justify-content: center;
     gap: 135px;
-    margin: 54px auto 132px auto;
+    margin: 54px auto 110px auto;
     font-family: Viaoda;
     font-size: 40px;
     color: $background-color;
@@ -282,28 +294,36 @@ header{
     display: flex;
     justify-content: center;
     margin-top: 50px;
-    min-height: 400px; // Чтобы блок не "прыгал" при смене картинок
+    min-height: 500px;
 }
 
 .menu-image {
-    display: none; // Скрываем все картинки по умолчанию
+    display: none;
     animation: fadeIn 0.5s ease-in-out;
 }
 
 .menu-image.active {
     display: flex;
     justify-content: center;
-    gap: 53px;
+    gap: 52px;
 }
 
 .menu-image-case{
     width: 330px;
-    max-height: 300px;
+    max-height: 463px;
+}
+
+.menu-image-case h4{
+    font-family: Viaoda;
+    font-size: 24px;
+    color: $background-color;
+    text-align: left;
+    padding-bottom: 10px;
 }
 
 .menu-image-case p{
     font-family: Viaoda;
-    font-size: 24px;
+    font-size: 20px;
     color: $background-color;
     text-align: left;
     
@@ -324,7 +344,7 @@ header{
 }
 
 .menu button{
-    @extend #site-main-text-actions-reserve;
+    @extend .site-main-text-actions-reserve;
 }
 
 .pattern{
@@ -628,6 +648,295 @@ footer{
 
 
 
+
+
+// Стили для банкетного меню
+.menu-content-info-banquet-items{
+    display: flex;
+    gap: 104px;
+    justify-content: center;
+    font-family: Viaoda;
+    color: $main-color;
+    flex-wrap: wrap;
+    margin-bottom: 128px;
+}
+
+.menu-text-block h4{
+    font-size: 24px;
+    // text-align: justify;
+}
+
+.menu-content-banquet-left{
+    max-width: 667px;
+}
+
+.menu-content-banquet-right{
+    max-width: 667px;
+}
+
+.menu-row {
+    display: flex;
+    align-items: baseline;
+    margin: 0;
+}
+
+.menu-row .name,
+.menu-row .menu-banquet-weight{
+//   white-space: nowrap;
+    background: $background-color;
+    padding: 0 6px;
+    position: relative;
+    z-index: 1;
+    font-size: 24px;
+}
+
+.menu-row .name{
+    font-weight: bold;
+}
+
+/* Блок с точками: растягивается и обрезает лишнее */
+.menu-row .text-dots {
+    flex: 1;
+    overflow: hidden;
+    // white-space: nowrap;
+    letter-spacing: 4px;
+    color: $main-color;
+    font-size: 24px;
+    line-height: 1;
+}
+
+/* Описание ингредиентов */
+.menu-item .description {
+    margin: 4px 0 0 0;
+    padding-left: 6px;
+    font-size: 20px;
+    color: $main-color;
+}
+
+.description.description-drinks-bread{
+    font-size: 24px;
+}
+
+.menu-image-block-banquet-first{
+    margin: 0 0 68px 0;
+}
+
+p.description.menu-description-indent{
+    padding-left: 40px;
+}
+
+.menu-image-block-banquet-last{
+    margin-top: 68px;
+}
+
+.menu-image-block-garnish1 img{
+    // display: block;
+    margin-left: 127px;
+    margin-bottom: 56px;
+    height: 300px;
+}
+
+.menu-image-block-garnish2 img{
+    text-align: left;
+    height: 300px;
+}
+
+.menu-image-block-banquet-hot img{
+    height: 506px;
+    width: 667px;
+}
+
+.image-cold1 img{
+    width: 667px;
+    height: 504px;
+}
+
+.image-cold2 img{
+    width: 667px;
+    height: 415px;
+}
+
+.menu-image-block-deserts1 img{
+    width: 620px;
+    height: 300px;
+    margin-left: 127px;
+}
+
+.menu-image-block-deserts2 img{
+    width: 620px;
+    height: 280px;
+    margin: 30px auto 30px auto;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+// стили для меню тортов
+.menu-cakes-block{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 71px;
+    // width: 293px;
+    text-align: left;
+    margin: 0 40px 142px 40px;
+    font-family: Viaoda;
+
+}
+
+.menu-cakes-block-title {
+    text-align: center;
+    font-family: Viaoda;
+    font-size: 48px;
+    color: $main-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 95px 0;
+    width: 100%;
+}
+
+.menu-cakes-block-title::before,
+.menu-cakes-block-title::after {
+    content: '';
+    flex: 1;
+    height: 2px;  // Толщина линии
+    background-color: $main-color;
+    max-width: 65px;  // Максимальная длина линий
+}
+
+.menu-cakes-block-title::before {
+    margin-right: 20px;  // Отступ от левой линии до текста
+}
+
+.menu-cakes-block-title::after {
+    margin-left: 20px;  // Отступ от текста до правой линии
+}
+
+.menu-cake{
+    width: 293px;
+    height: 586px;
+    position: relative;
+}
+
+.menu-cake img{
+    width: 270px;
+    height: 268px;
+}
+
+.menu-cake h4{
+    padding-top: 39px;
+    font-size: 26px;
+}
+
+.menu-cake span{
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+.menu-cake-weight{
+    display: flex;
+    gap: 16px;
+    position: absolute;
+    bottom: 0;
+}
+
+.menu-cake-weight-number{
+    font-size: 26px;
+    align-items: center;
+    border: $main-color 2px solid;
+    width: 154px;
+    height: 40px;
+    padding: 3px 0 3px 0;
+    text-align: center;
+}
+
+.menu-cake-weight-likes{
+    display: flex;
+    gap: 7px;
+}
+
+.menu-cake-weight-number-of-like{
+    font-size: 20px;
+    align-content: center;
+}
+
+.menu-cake-weight img{
+    display: block;
+    width: 33px;
+    height: 29px;
+}
+
+.menu-cake-weight button{
+    background: none;
+    // text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-cakes-big-block{
+    display: flex;
+    gap: 125px;
+    justify-content: center;
+}
+
+.menu-cakes-big-block{
+    // width: 677px;
+    // height: 425px;
+    text-align: left;
+    margin-bottom: 159px;
+    font-family: Viaoda;
+}
+
+.menu-cakes-big-block-description{
+    padding-top: 43px;
+}
+
+.menu-cakes-big-block-description h3{
+    font-size: 40px;
+}
+
+.menu-cakes-big-block-description span{
+    font-size: 24px;
+    padding: 29px 0;
+    max-width: 479px;
+    display: block;
+}
+
+.menu-cake-weight-big{
+    display: flex;
+    gap: 20px;
+}
+
+.menu-cake-weight-big button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-cake-weight-number-big{
+    @extend .menu-cake-weight-number;
+
+}
+
+
+
+
+
+
+
+
+
+
+
 // Стили для раздела о нас
 .container-about-us{
     background: $background-color;
@@ -716,6 +1025,65 @@ footer{
     @extend .about-us-info-vostorg;
     gap: 160px;
 }
+
+.about-us-text-center_cooking{
+    @extend .about-us-text-center;
+    text-align: center;
+}
+
+.about-us-image-border-cooking{
+    @extend .about-us-image-border-vostorg;
+    width: 749px;
+    height: 401px;
+}
+
+.about-us-image-border-cake{
+    @extend .about-us-image-border-vostorg;
+    width: 745px;
+    height: 618px;
+}
+
+.about-us-text-side li{
+    margin-left: 30px;
+}
+
+.shops{
+    display: grid;
+    grid-template-columns: 301px 424px 277px;
+    gap: 131px;
+    border: $main-color 2px solid;
+    padding: 35px 84px;
+    // justify-content: center;
+    margin: 0 auto 137px auto;
+    box-sizing: border-box;
+    // max-width: 1400px;
+    width: 90%;
+}
+
+.shops-title{
+    font-family: Viaoda;
+    font-size: 36px;
+    padding-bottom: 42px;
+}
+
+.shops-colum p{
+    font-family: Viaoda;
+    font-size: 28px;
+    padding-bottom: 26px;
+}
+
+.about-us-image-border-meteor{
+    @extend .about-us-image-border-vostorg;
+    width: 609px;
+    height: 612px;
+}
+
+
+
+
+
+
+
 
 
 

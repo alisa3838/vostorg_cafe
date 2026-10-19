@@ -20,143 +20,147 @@
             <a href="#footer">Контакты</a>
         </div>
         <div class="contacts">
-            <button id="open-call-modal">Позвонить</button>
+            <button class="open-call-modal">Позвонить</button>
             <a href="https://vk.ru/club92098046"><img src="img/vk3.svg" alt="ВКонтакте"></a>
             <a href="#"><img src="img/max3.svg" alt="Макс"></a>
         </div>
     </header>
-    <div class="site-main">
-        <div class="site-main-text">
-            <div class="footnote">
-                <img src="img/footnote.svg" alt="">
-                <p>Уютное кафе <br> Для важных событий</p>
-            </div>
-            <img src="img/logo.svg" alt="Кафе Восторг">
-            <p class="site-main-text-p">Идеальное место для проведения мероприятий<br> и праздников</p>
-            <div class="site-main-text-actions">
-                <button id="site-main-text-actions-call">Позвонить</button>
-                <button id="site-main-text-actions-reserve">Просмотреть меню</button>
-            </div>
-        </div>
-        <div class="main-foto">
-            <img src="img/Главное.png" alt="">
-        </div>
-    </div>
-    <div class="about-us" id="about-us">
-        <div class="about-title">
-            <p>О нас</p>
-        </div>
-        <div class="about-us-items">
-            <p>«Восторг» — кафе, где вкусно. Мы кормим завтраками, вдохновляем десертами и согреваем напитками. Заходите в гости! Здесь всегда свежая выпечка, душевная атмосфера и самые приятные цены. </p>
-            <div class="about-us-items-image">
-                <div class="image-border"></div>
-                <div class="image-placeholder">
-                    <img src="img/онасФото.png" alt="">
+    <div class="container-background">
+        <div class="site-main">
+            <div class="site-main-text">
+                <div class="footnote">
+                    <img src="img/footnote.svg" alt="">
+                    <p>Уютное кафе <br> Для важных событий</p>
+                </div>
+                <img src="img/logo.svg" alt="Кафе Восторг">
+                <p class="site-main-text-p">Идеальное место для проведения мероприятий<br> и праздников</p>
+                <div class="site-main-text-actions">
+                    <button class="open-call-modal site-main-text-actions-call">Позвонить</button>
+                    <button class="site-main-text-actions-reserve" onclick="window.location.href='menu.html'">Просмотреть меню</button>
                 </div>
             </div>
+            <div class="main-foto">
+                <img src="img/Главное.png" alt="">
+            </div>
         </div>
-        <button onclick="window.location.href='about-us.html'">Подробнее</button>
+        <div class="about-us" id="about-us">
+            <div class="about-title">
+                <p>О нас</p>
+            </div>
+            <div class="about-us-items">
+                <p>«Восторг» — кафе, где вкусно. Мы кормим завтраками, вдохновляем десертами и согреваем напитками. Заходите в гости! Здесь всегда свежая выпечка, душевная атмосфера и самые приятные цены. </p>
+                <div class="about-us-items-image">
+                    <div class="image-border"></div>
+                    <div class="image-placeholder">
+                        <img src="img/онасФото.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <button onclick="window.location.href='about-us.html'">Подробнее</button>
+        </div>
     </div>
     <div class="menu" id="menu">
         <div class="menu-title">
             <p>Меню</p>
         </div>
-        <img src="img/menu_line_beige.svg" alt="">
-        <div class="menu-nav">
-            <p class="menu-nav-p active" data-target="buffet">Фуршетное меню</p>
-            <p class="menu-nav-p" data-target="banquet">Банкетное меню</p>
-            <p class="menu-nav-p" data-target="cakes">Торты</p>
-            <p class="menu-nav-p" data-target="coffee-bar">Кофе-бар</p>
-        </div>
+        <div class="menu-changing">
+            <img src="img/menu_line_beige.svg" alt="">
+            <div class="menu-nav">
+                <p class="menu-nav-p active" data-target="buffet">Фуршетное меню</p>
+                <p class="menu-nav-p" data-target="banquet">Банкетное меню</p>
+                <p class="menu-nav-p" data-target="cakes">Торты</p>
+                <p class="menu-nav-p" data-target="coffee-bar">Кофе-бар</p>
+            </div>
 
-    <!-- Контейнер для фотографий -->
-<div class="menu-images">
-            <div class="menu-image active" id="buffet">
-                <div class="menu-image-case">
-                    <img src="img/фуршетноеМеню1.png" alt="Фуршетное меню">
-                    <p>Название</p>
-                    <p>Описание/состав</p>
+            <!-- Контейнер для фотографий -->
+            <div class="menu-images">
+                <div class="menu-image active" id="buffet">
+                    <div class="menu-image-case">
+                        <img src="img/фуршетноеМеню1.png" alt="Фуршетное меню">
+                        <p>Название</p>
+                        <p>Описание/состав</p>
+                    </div>
+                    <div class="menu-image-case">
+                        <img src="img/фуршетноеМеню2.png" alt="Фуршетное меню">
+                        <p>Название</p>
+                        <p>Описание/состав</p>
+                    </div>
+                    <div class="menu-image-case">
+                        <img src="img/фуршетноеМеню3.png" alt="Фуршетное меню">
+                        <p>Название</p>
+                        <p>Описание/состав</p>
+                    </div>
+                    <div class="menu-image-case">
+                        <img src="img/фуршетноеМеню4.png" alt="Фуршетное меню">
+                        <p>Название</p>
+                        <p>Описание/состав</p>
+                    </div>
                 </div>
-                <div class="menu-image-case">
-                    <img src="img/фуршетноеМеню2.png" alt="Фуршетное меню">
-                    <p>Название</p>
-                    <p>Описание/состав</p>
+                <div class="menu-image" id="banquet">
+                    <div class="menu-image-case">
+                        <img src="img/фуршетноеМеню2.png" alt="Фуршетное меню">
+                        <p>Название</p>
+                        <p>Описание/состав</p>
+                    </div>
+                    <div class="menu-image-case">
+                        <img src="img/фуршетноеМеню3.png" alt="Фуршетное меню">
+                        <p>Название</p>
+                        <p>Описание/состав</p>
+                    </div>
+                    <div class="menu-image-case">
+                        <img src="img/фуршетноеМеню4.png" alt="Фуршетное меню">
+                        <p>Название</p>
+                        <p>Описание/состав</p>
+                    </div>
+                    <div class="menu-image-case">
+                        <img src="img/фуршетноеМеню1.png" alt="Фуршетное меню">
+                        <p>Название</p>
+                        <p>Описание/состав</p>
+                    </div>
                 </div>
-                <div class="menu-image-case">
-                    <img src="img/фуршетноеМеню3.png" alt="Фуршетное меню">
-                    <p>Название</p>
-                    <p>Описание/состав</p>
+                <div class="menu-image" id="cakes">
+                    <div class="menu-image-case">
+                        <img src="img/Ассорти_меню.png" alt="">
+                        <h4>Торт «Ассорти»</h4>
+                        <p>Пряничные рулетики с начинками из изюма, кураги и мака уложены пирамидой и прослоены сметано-сливочным кремом. Торт оформлен тертым шоколадом.</p>
+                    </div>
+                    <div class="menu-image-case">
+                        <img src="img/Эстерхази_меню.png" alt="">
+                        <h4>Торт «Эстерхази»</h4>
+                        <p>Воздушно-ореховый полуфабрикат прослоен масляным ореховым кремом. Торт оформлен этим же кремом, шоколадной глазурью и дроблеными орехами.</p>
+                    </div>
+                    <div class="menu-image-case">
+                        <img src="img/Коньячный_десерт_меню.png" alt="">
+                        <h4>Торт «Коньячный десерт»</h4>
+                        <p>На основе из шоколадного бисквита - коньячный мусс, кофейное суфле, покрыто взбитыми сливками, посыпан какао.</p>
+                    </div>
+                    <div class="menu-image-case">
+                        <img src="img/Шоколадный_меню.png" alt="">
+                        <h4>Торт «Шоколадный»</h4>
+                        <p>Масляный шоколадный бисквит прослоен шоколадным суфле на основе взбитых сливок. Торт оформлен прозрачными гелем и шоколадными фигурками.</p>
+                    </div>
                 </div>
-                <div class="menu-image-case">
-                    <img src="img/фуршетноеМеню4.png" alt="Фуршетное меню">
-                    <p>Название</p>
-                    <p>Описание/состав</p>
-                </div>
-            </div>
-            <div class="menu-image" id="banquet">
-                <div class="menu-image-case">
-                    <img src="img/фуршетноеМеню2.png" alt="Фуршетное меню">
-                    <p>Название</p>
-                    <p>Описание/состав</p>
-                </div>
-                <div class="menu-image-case">
-                    <img src="img/фуршетноеМеню3.png" alt="Фуршетное меню">
-                    <p>Название</p>
-                    <p>Описание/состав</p>
-                </div>
-                <div class="menu-image-case">
-                    <img src="img/фуршетноеМеню4.png" alt="Фуршетное меню">
-                    <p>Название</p>
-                    <p>Описание/состав</p>
-                </div>
-                <div class="menu-image-case">
-                    <img src="img/фуршетноеМеню1.png" alt="Фуршетное меню">
-                    <p>Название</p>
-                    <p>Описание/состав</p>
-                </div>
-            </div>
-            <div class="menu-image" id="cakes">
-                <div class="menu-image-case">
-                    <img src="img/фуршетноеМеню3.png" alt="Фуршетное меню">
-                    <p>Название</p>
-                    <p>Описание/состав</p>
-                </div>
-                <div class="menu-image-case">
-                    <img src="img/фуршетноеМеню4.png" alt="Фуршетное меню">
-                    <p>Название</p>
-                    <p>Описание/состав</p>
-                </div>
-                <div class="menu-image-case">
-                    <img src="../vostorg/img/фуршетноеМеню1.png" alt="Фуршетное меню">
-                    <p>Название</p>
-                    <p>Описание/состав</p>
-                </div>
-                <div class="menu-image-case">
-                    <img src="img/фуршетноеМеню2.png" alt="Фуршетное меню">
-                    <p>Название</p>
-                    <p>Описание/состав</p>
-                </div>
-            </div>
-            <div class="menu-image" id="coffee-bar">
-                <div class="menu-image-case">
-                    <img src="img/фуршетноеМеню1.png" alt="Фуршетное меню">
-                    <p>Название</p>
-                    <p>Описание/состав</p>
-                </div>
-                <div class="menu-image-case">
-                    <img src="img/фуршетноеМеню2.png" alt="Фуршетное меню">
-                    <p>Название</p>
-                    <p>Описание/состав</p>
-                </div>
-                <div class="menu-image-case">
-                    <img src="img/фуршетноеМеню3.png" alt="Фуршетное меню">
-                    <p>Название</p>
-                    <p>Описание/состав</p>
-                </div>
-                <div class="menu-image-case">
-                    <img src="img/фуршетноеМеню4.png" alt="Фуршетное меню">
-                    <p>Название</p>
-                    <p>Описание/состав</p>
+                <div class="menu-image" id="coffee-bar">
+                    <div class="menu-image-case">
+                        <img src="img/пирожное Дор Блю (1).jpg" alt="">
+                        <h4>Пирожное Дор Блю с грушей</h4>
+                        <p>Шоколадный бисквит, шоколадное суфле на основе взбитых сливок и крема Англез, в середине – шарик из желе с грушей и суфле с сыром Дор блю.</p>
+                    </div>
+                    <div class="menu-image-case">
+                        <img src="img/пирожное Очарование (1).jpg" alt="">
+                        <h4>Пирожное Очарование</h4>
+                        <p>Поверхность покрыта гелем Черная смородина. На тонком шоколадном бисквите суфле на основе взбитых сливок с начинкой.</p>
+                    </div>
+                    <div class="menu-image-case">
+                        <img src="img/пирожное Парижанка.jpg" alt="">
+                        <h4>Пирожное Парижанка</h4>
+                        <p>Кольцо из заварного теста, с вишневой начинкой и кремом Патисьер.</p>
+                    </div>
+                    <div class="menu-image-case">
+                        <img src="img/Ореховая тартина.jpg" alt="">
+                        <h4>Тарталетта ореховая</h4>
+                        <p>Корзиночка из песочного теста наполнена кремом на основе взбитых сливок с добавлением начинки Пралине, на нее выложены фундук, миндаль и грецкий орех.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -238,7 +242,10 @@
                 <div class="footer-info-text">
                     <div class="footer-info-text-connection">
                         <p class="footer-info-text-connection-items">Связь</p>
-                        <p>43-23-92 <br> +7 (3412) 48-02-91 <br> +7 (3412) 43-23-92</p>
+                        <a href="tel:+73412432392">+7 (3412) 43 23 92</a><br>
+                        <a href="tel:+73412485972">+7 (3412) 48 59 72 </a><br>
+                        <a href="tel:+73412485797">+7 (3412) 48 57 97</a><br>
+                        <a href="tel:+73412917086">+7 (3412) 91 70 86</a><br>
                     </div>
                     <div class="time">
                         <p class="footer-info-text-connection-items">Время работы:</p>
@@ -246,7 +253,7 @@
                     </div>
                     <div class="address">
                         <p class="footer-info-text-connection-items">Где мы находимся:</p>
-                        <p>Удмуртская Республика, Ижевск, Северо-Западный жилой район, 7-й микрорайон</p>
+                        <p>Удмуртская Республика, Ижевск, Песочная улица, 3</p>
                     </div>
                 </div>
                 <div class="footer-bottom">
@@ -274,25 +281,54 @@
 
 <script>
     $(document).ready(function() {
-        // При клике на любой элемент с классом .menu-nav-p
+        let autoSwitchInterval;
+        const switchDelay = 5000; // Интервал переключения: 4000 мс = 4 секунды
+
+        // Функция переключения на следующий пункт
+        function switchToNext() {
+            const $current = $('.menu-nav-p.active');
+            // Ищем следующий элемент, если его нет — берем первый
+            const $next = $current.next('.menu-nav-p').length ? $current.next('.menu-nav-p') : $('.menu-nav-p').first();
+            
+            // Имитируем клик, чтобы сработала вся ваша логика переключения
+            $next.trigger('click');
+        }
+
+        // Запуск автопереключения
+        function startAutoSwitch() {
+            autoSwitchInterval = setInterval(switchToNext, switchDelay);
+        }
+
+        // Сброс и перезапуск таймера (нужен при ручном клике)
+        // function resetAutoSwitch() {
+        //     clearInterval(autoSwitchInterval);
+        //     startAutoSwitch();
+        // }
+
+        // Обработчик клика по пунктам меню
         $('.menu-nav-p').on('click', function() {
-            
-            // 1. Убираем класс 'active' у всех пунктов меню
             $('.menu-nav-p').removeClass('active');
-            
-            // 2. Добавляем класс 'active' тому пункту, на который кликнули
             $(this).addClass('active');
             
-            // 3. Считываем значение атрибута data-target у нажатого пункта (например, "buffet")
             var targetId = $(this).data('target');
-            
-            // 4. Убираем класс 'active' у всех блоков с картинками (скрываем их)
             $('.menu-image').removeClass('active');
-            
-            // 5. Находим блок с картинкой, у которого id совпадает с targetId, и показываем его
             $('#' + targetId).addClass('active');
+            
+            // Сбрасываем таймер при ручном переключении
+            // resetAutoSwitch();
         });
-        $('#open-call-modal').click(function() {
+
+        // Запускаем автопереключение при загрузке страницы
+        startAutoSwitch();
+
+        // Удобная фишка: ставим на паузу при наведении мыши на меню, чтобы пользователь мог спокойно читать
+        $('.menu-changing').hover(
+            function() { clearInterval(autoSwitchInterval); }, // Мышь наведена -> пауза
+            function() { startAutoSwitch(); }                  // Мышь убрана -> продолжить
+        );
+
+        // --- Модальное окно с номером ---
+        $('.open-call-modal').click(function() {
             $('#call-modal').css('display', 'flex');
         });
 
@@ -309,8 +345,9 @@
 <div class="modal-overlay" id="call-modal">
     <div class="modal-window">
         <span class="modal-close">&times;</span>
-        <a href="tel:+73412480291">+7 (3412) 48-02-91</a>
-        <a href="tel:+73412432392">+7 (3412) 43-23-92</a>
+        <a href="tel:+73412432392">Кафе «Восторг» +7 (3412) 43 23 92</a>
+        <a href="tel:+73412485972">Кондитерский цех +7 (3412) 48 59 72, </a><a href="tel:+73412485797">+7 (3412) 48 57 97</a>
+        <a href="tel:+73412917086">Соловая «Метеор» +7 (3412) 91 70 86</a>
     </div>
 </div>
 
