@@ -904,6 +904,7 @@ p.description.menu-description-indent {
 
 .image-coffee-bar {
   right: 47px;
+  margin-right: 47px;
 }
 
 .about-us-image-border-coffee-bar {
@@ -941,6 +942,7 @@ p.description.menu-description-indent {
   padding: 35px 84px;
   margin: 0 auto 137px auto;
   box-sizing: border-box;
+  max-width: 1400px;
   width: 90%;
 }
 

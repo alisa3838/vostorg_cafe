@@ -1013,6 +1013,7 @@ p.description.menu-description-indent{
 .image-coffee-bar{
     @extend .image-vostorg;
     right: 47px;
+    margin-right: 47px
 }
 
 .about-us-image-border-coffee-bar{
@@ -1056,8 +1057,9 @@ p.description.menu-description-indent{
     // justify-content: center;
     margin: 0 auto 137px auto;
     box-sizing: border-box;
-    // max-width: 1400px;
+    max-width: 1400px;
     width: 90%;
+
 }
 
 .shops-title{
