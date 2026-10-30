@@ -1375,7 +1375,7 @@ td {
 
 
 
-// Адаптация под мобильные устройства (iPhone 12: 390px)
+// Адаптация под мобильные устройства
 
 // для страницы О НАС
 @media (max-width: 480px) {
@@ -1386,15 +1386,6 @@ td {
         margin: 0;
         display: flex;
         height: 50px;
-    }
-
-    .nav {
-        // // display: flex;
-        // align-items: center;
-        // justify-content: space-between;
-        // // flex-wrap: nowrap;
-        // padding: 0 16px;
-        // gap: 12px;
     }
 
     .nav img{
@@ -1440,11 +1431,10 @@ td {
         }
     }
 
-    // Контакты — остаются в шапке, сжимаются
+    // Контакты
     .contacts {
         display: flex;
         align-items: center;
-        // align-content: center;
         gap: 8px;
         text-align: center;
 
@@ -1464,14 +1454,11 @@ td {
         }
     }
 
-    // Бургер — справа, после контактов
     .burger {
         display: flex;
-        // flex-shrink: 0;
         margin-left: 4px;
     }
 
-    // Бургер → крестик
     .burger.is-active {
         span:nth-child(1) { transform: translateY(10.5px) rotate(45deg); }
         span:nth-child(2) { opacity: 0; }
@@ -1485,7 +1472,7 @@ td {
 
 
 
-    // Блокировка скролла при открытом меню
+    // Блокировка скролла
     body.menu-open {
         overflow: hidden;
     }
@@ -1494,7 +1481,7 @@ td {
         overflow-x: hidden;
     }
 
-    // ---------- Заголовок "О нас" ----------
+    // Заголовок "О нас"
     .menu-title-items p {
         font-size: 32px;
         text-align: center;
@@ -1506,7 +1493,7 @@ td {
         height: auto;
     }
 
-    // ---------- Заголовки секций ----------
+    // Заголовки секций
     .about-us-titles {
         font-size: 28px;
         margin: 0 auto 32px auto;
@@ -1517,14 +1504,13 @@ td {
         }
     }
 
-    // ---------- Текст ----------
+    // Текст
     .about-us-text-center {
         font-size: 18px;
         line-height: 1.4;
         margin: 0 auto 24px auto;
         max-width: 100%;
         padding: 0 16px;
-        // text-align: justify;
     }
 
     .about-us-text-side {
@@ -1550,7 +1536,6 @@ td {
         margin-bottom: 32px;
     }
 
-    // ---------- Блоки с фото (flex → column) ----------
     .about-us-info-vostorg,
     .about-us-info-coffee-bar {
         flex-direction: column;
@@ -1559,15 +1544,14 @@ td {
         align-items: center;
     }
 
-    // Обёртка картинки — сжимаем под контейнер
     .about-us-image-vostorg {
         width: 90%;
         position: relative;
-        padding: 12px 0 0 12px; // место под рамку-смещение
+        padding: 12px 0 0 12px;
         box-sizing: border-box;
     }
 
-    // Все рамки — единый размер под мобильный
+    // Все рамки
     .about-us-image-border-vostorg,
     .about-us-image-border-coffee-bar,
     .about-us-image-border-cooking,
@@ -1618,11 +1602,9 @@ td {
         margin-right: 0;
     }
 
-    // ---------- Таблица магазинов ----------
+    //Таблица магазинов
     .shops {
         width: 100%;
-        // overflow-x: auto;
-        // -webkit-overflow-scrolling: touch;
         margin-bottom: 48px;
 
     }
@@ -1644,10 +1626,9 @@ td {
         font-size: 10px;
         padding: 10px 6px;
         width: 100px;
-        // vertical-align: top;
     }
 
-    // ---------- Разделитель ----------
+    // Разделитель
     .line-millet {
         text-align: center;
         // margin: 32px 0;
@@ -1658,7 +1639,7 @@ td {
         }
     }
 
-    // ---------- Футер ----------
+    // Футер
     .footer-content {
         background-image: none;
         padding: 0;
@@ -1731,7 +1712,7 @@ td {
             font-size: 14px;
         }
     }
-    // ---------- Модальное окно ----------
+    // Модальное окно
     .modal-window {
         width: 90%;
         max-width: 300px;
@@ -1750,15 +1731,12 @@ td {
         top: 8px;
         right: 12px;
     }
-}
+
 
 
 
 
 // адаптация для основного раздела 
-
-@media (max-width: 480px) {
-    
     .banner {
         height: auto;
         min-height: 420px;
@@ -1797,7 +1775,6 @@ td {
         box-sizing: border-box;
     }
 
-    // Скрываем большую картинку
     .main-foto {
         display: none;
     }
@@ -1870,7 +1847,7 @@ td {
         }
     }
 
-    // ---------- О нас ----------
+    // О нас
     .about-us {
         padding: 32px 16px 48px;
     }
@@ -1897,12 +1874,12 @@ td {
     .about-us-items-image {
         width: 100%;
         max-width: 320px;
-        position: relative; // Создаем контекст для абсолютного позиционирования рамки
+        position: relative;
         margin: 0 auto;
     }
 
     .image-border {
-        position: absolute; // ОБЯЗАТЕЛЬНО! Чтобы рамка была фоном
+        position: absolute;
         top: 0;
         left: 0;
         width: 100%;
@@ -1913,8 +1890,8 @@ td {
 
     .image-placeholder {
         position: relative;
-        top: 12px;          // Смещение картинки вниз относительно рамки
-        left: 12px;         // Смещение картинки вправо относительно рамки
+        top: 12px;
+        left: 12px;
         width: 100%;
         z-index: 1; 
 
@@ -1936,7 +1913,7 @@ td {
         font-size: 14px;
     }
 
-    // ---------- Меню ----------
+    // Меню
     .menu {
         padding: 32px 16px;
     }
@@ -2007,7 +1984,7 @@ td {
         padding: 10px 28px;
     }
 
-    // ---------- Узор ----------
+    //Узор
     .pattern {
         padding-top: 16px;
 
@@ -2017,7 +1994,7 @@ td {
         }
     }
 
-    // ---------- Наши залы ----------
+    // Наши залы
     .hall {
         padding: 32px 16px 48px;
     }
@@ -2083,14 +2060,13 @@ td {
         line-height: 1.4;
     }
 
-    // ---------- Отзывы ----------
+    // Отзывы
     .feedback {
         padding: 0 0 32px;
     }
 
     .feedback-title p {
         font-size: 24px;
-        // margin-bottom: 20px;
         padding: 0 16px;
     }
 
@@ -2134,7 +2110,7 @@ td {
         }
     }
 
-    // ---------- Разделитель ----------
+    // Разделитель
     .line-millet {
         text-align: center;
         padding: 16px 0;
@@ -2144,15 +2120,12 @@ td {
             height: auto;
         }
     }
-}
 
 
 
 // для страницы меню
 
-@media (max-width: 480px) {
-
-    // --- Общие контейнеры ---
+    // Общие контейнеры
     .container-menu {
         overflow-x: hidden;
     }
@@ -2162,7 +2135,7 @@ td {
         box-sizing: border-box;
     }
 
-    // --- Заголовок "Меню" ---
+    // Заголовок "Меню"
     .menu-title-items {
         padding-top: 32px;
 
@@ -2177,7 +2150,7 @@ td {
         margin: 0 auto 24px auto;
     }
 
-    // --- Навигация меню (4 пункта) ---
+    // Навигация меню
     .menu-nav {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -2192,7 +2165,7 @@ td {
         text-align: center;
     }
 
-    // выпадающее "Банкетное меню"
+    // выпадающее Банкетное меню
     .nav-dropdown {
         position: relative;
     }
@@ -2223,7 +2196,7 @@ td {
     }
 
 
-        // --- Фуршетное меню ---
+    // Фуршетное меню
     #buffet.menu-content-info.active {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2245,7 +2218,7 @@ td {
         width: 100%;
         display: flex;
         flex-direction: column;
-        gap: 12px; // Отступ между блоками внутри колонки
+        gap: 12px;
     }
 
     // Уменьшаем текст
@@ -2253,25 +2226,24 @@ td {
         width: 100%;
 
         h3 {
-            font-size: 13px; // Заголовки категорий
+            font-size: 13px;
             margin-top: 8px;
             margin-bottom: 4px;
             line-height: 1.2;
         }
 
         p {
-            font-size: 10px; // Основной текст
-            line-height: 1.35;
+            font-size: 10px;
             white-space: normal;
             margin-bottom: 8px;
         }
     }
 
     .menu-subitem {
-        padding-left: 10px; // Уменьшаем отступ для подпунктов
+        padding-left: 10px;
     }
 
-    // Уменьшаем фотографии
+    // Фотографии 
     .menu-image-block,
     .menu-image-block-right {
         width: 100%;
@@ -2280,8 +2252,8 @@ td {
         img {
             width: 100%;
             max-width: 100%;
-            height: 120px; // Фиксируем высоту, чтобы сетка была ровной
-            object-fit: cover; // Чтобы фото не искажались
+            height: 120px;
+            object-fit: cover;
             border-radius: 8px;
             margin: 4px 0 12px 0;
         }
@@ -2298,9 +2270,8 @@ td {
     
     .menu-text-block-weight{
         display: block;
-        margin-left: auto;        // Прижимаем к правому краю
-        // white-space: nowrap;
-        flex-basis: 100%;         // Занимает 100% ширины контейнера
+        margin-left: auto;
+        flex-basis: 100%;
         text-align: right;
         font-weight: bold;
 
@@ -2314,13 +2285,12 @@ td {
 
 
 
-    // --- Банкетное меню ---
+    // Банкетное меню
 
 
     .menu-cakes-block-title {
         font-size: 24px;
         margin: 24px 0;
-        // Разрешаем перенос, если текст длинный
         flex-wrap: wrap;
         text-align: center;
         row-gap: 6px;
@@ -2328,8 +2298,7 @@ td {
         &::before,
         &::after {
             content: '';
-            flex: 1 1 16px;       // минимум 16px, растягивается
-            min-width: 16px;      // ← ключ: не даём схлопнуться в 0
+            min-width: 16px;
             height: 2px;
             background-color: $main-color;
             max-width: 40px;
@@ -2340,23 +2309,22 @@ td {
     }
 
     .menu-roll-block-title {
-        font-size: 24px; // Немного уменьшаем, чтобы текст влез
+        font-size: 24px;
         max-width: 250px;
         line-height: 1.3;
         margin: 24px auto;
-        display: block; // Отключаем flex, чтобы управлять линиями вручную
+        display: block;
         position: relative;
         text-align: center;
-        padding: 0 45px; // Оставляем место по бокам для линий
+        padding: 0 45px;
 
-        // Убираем старые псевдоэлементы
         &::before,
         &::after {
             content: '';
             position: absolute;
-            top: 50%; // Идеальный центр по вертикали
+            top: 50%;
             transform: translateY(-50%); // Точное центрирование
-            width: 35px; // Длина линии
+            width: 35px;
             height: 2px;
             background-color: $main-color;
         }
@@ -2374,17 +2342,17 @@ td {
 
     
 
-        // --- Банкетное меню: 2 колонки в ряд ---
+    // Банкетное меню
     .menu-content-info-banquet-items {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr)); // 2 колонки
-        gap: 16px 12px; // отступы между колонками и строками
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px 12px;
         margin-bottom: 32px;
         align-items: start;
         text-align: left;
     }
 
-    // Уменьшаем текстовые блоки
+    // текстовые блоки
     .menu-content-banquet-left,
     .menu-content-banquet-right {
         max-width: 100%;
@@ -2398,7 +2366,7 @@ td {
 
     .menu-row .name,
     .menu-row .menu-banquet-weight {
-        font-size: 11px; // Уменьшаем шрифт названий и веса
+        font-size: 11px;
         padding: 0 2px;
     }
 
@@ -2416,7 +2384,7 @@ td {
     }
 
     .menu-item .description {
-        font-size: 9px; // Уменьшаем шрифт описания
+        font-size: 9px;
         padding-left: 2px;
         line-height: 1.3;
     }
@@ -2429,7 +2397,7 @@ td {
         padding-left: 10px;
     }
 
-    // Уменьшаем картинки
+    // картинки
     .menu-image-block-banquet-first,
     .menu-image-block-banquet-last {
         margin: 0 0 12px 0;
@@ -2439,14 +2407,14 @@ td {
             width: 100%;
             max-width: 100%;
             height: auto;
-            border-radius: 8px; // Чуть меньше скругление
+            border-radius: 8px;
         }
     }
 
     .menu-image-block-garnish1 img,
     .menu-image-block-garnish2 img {
         margin: 0 auto 12px auto;
-        height: 120px; // Ограничиваем высоту
+        height: 120px;
         max-width: 100%;
         object-fit: cover;
         display: block;
@@ -2460,14 +2428,13 @@ td {
     .menu-image-block-deserts2 img {
         width: 100%;
         max-width: 100%;
-        height: 120px; // Фиксируем высоту, чтобы сетка не ломалась
+        height: 120px;
         object-fit: cover;
         margin: 12px auto;
         display: block;
         border-radius: 8px;
     }
     
-    // Специфичное выравнивание, если картинки идут в разных колонках
     .menu-content-banquet-left,
     .menu-content-banquet-right {
         display: flex;
@@ -2476,7 +2443,7 @@ td {
     }
 
 
-        // --- Торты: карточки (по 2 в ряд) ---
+    // Торты
     .menu-cakes-block {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2488,15 +2455,15 @@ td {
     .menu-cake {
         width: 100%;
         max-width: 100%;
-        height: auto;              // убираем фикс. высоту 586px
+        height: auto;
         position: relative;
-        padding-bottom: 50px;      // место под вес/лайк
+        padding-bottom: 50px;
         box-sizing: border-box;
 
         img {
             width: 100%;
             max-width: 100%;
-            height: 150px;          // одинаковая высота превью, чтобы карточки были ровными
+            height: 170px;
             object-fit: cover;
             border-radius: 12px;
             display: block;
@@ -2550,7 +2517,7 @@ td {
         font-size: 12px;
     }
 
-    // --- Большие блоки тортов ---
+    // Большие блоки тортов
     .menu-cakes-big-block {
         flex-direction: column;
         gap: 20px;
@@ -2591,7 +2558,7 @@ td {
         width: 20px;
     }
 
-    // --- "Торты на заказ" ---
+    // Торты на заказ
     .menu-cakes-order-block-description {
         max-width: 100%;
         font-size: 15px;
@@ -2626,7 +2593,7 @@ td {
         display: none;
     }
 
-    // --- Примеры работ ---
+    // Примеры работ
     .examples-of-works {
         flex-direction: column;
         gap: 16px;
@@ -2642,30 +2609,8 @@ td {
         }
     }
 
-    // --- Кофе-бар ---
+    // Кофе-бар
     .menu-content-info-cakes {
         width: 100%;
-    }
-
-    // --- Футер: line-millet уже адаптирован, но подстрахуемся ---
-    .line-millet {
-        padding-bottom: 24px;
-
-        img {
-            width: 70%;
-            height: auto;
-        }
-    }
-
-    .modal-window {
-        width: 90%;
-        max-width: 320px;
-        padding: 24px 16px;
-
-        a {
-            font-size: 16px;
-            margin: 10px 0;
-            line-height: 1.3;
-        }
     }
 }

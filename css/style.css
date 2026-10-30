@@ -1495,8 +1495,6 @@ td {
     top: 8px;
     right: 12px;
   }
-}
-@media (max-width: 480px) {
   .banner {
     height: auto;
     min-height: 420px;
@@ -1816,8 +1814,6 @@ td {
     width: 70%;
     height: auto;
   }
-}
-@media (max-width: 480px) {
   .container-menu {
     overflow-x: hidden;
   }
@@ -1904,7 +1900,6 @@ td {
   }
   .menu-text-block p {
     font-size: 10px;
-    line-height: 1.35;
     white-space: normal;
     margin-bottom: 8px;
   }
@@ -1949,7 +1944,6 @@ td {
   }
   .menu-cakes-block-title::before, .menu-cakes-block-title::after {
     content: "";
-    flex: 1 1 16px;
     min-width: 16px;
     height: 2px;
     background-color: #265AA2;
@@ -2090,7 +2084,7 @@ td {
   .menu-cake img {
     width: 100%;
     max-width: 100%;
-    height: 150px;
+    height: 170px;
     -o-object-fit: cover;
        object-fit: cover;
     border-radius: 12px;
@@ -2210,22 +2204,5 @@ td {
   }
   .menu-content-info-cakes {
     width: 100%;
-  }
-  .line-millet {
-    padding-bottom: 24px;
-  }
-  .line-millet img {
-    width: 70%;
-    height: auto;
-  }
-  .modal-window {
-    width: 90%;
-    max-width: 320px;
-    padding: 24px 16px;
-  }
-  .modal-window a {
-    font-size: 16px;
-    margin: 10px 0;
-    line-height: 1.3;
   }
 }/*# sourceMappingURL=style.css.map */
