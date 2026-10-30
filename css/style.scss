@@ -11,12 +11,6 @@ $background-color: #FFF0E9;
     src: url(../fonts/ViaodaLibre-Regular.ttf);
 }
 
-// @mixin main-text-prata{
-//     font-family: Viaoda;
-//     font-size: 1.5em;
-//     color: $main-color;
-// }
-
 @mixin heding-text-Viaoda{
     font-family: Viaoda;
     font-size: 5em;
@@ -43,9 +37,6 @@ header{
     align-items: center;
     border-bottom: 2px solid $main-color;
     box-shadow:  0px 4px 4px rgba(0, 0, 0, 0.25);
-    // position: sticky;
-    // top: 0;
-    // z-index: 4;
 }
 
 .nav{
@@ -61,7 +52,7 @@ header{
 }
 
 .nav a:hover{
-    border-bottom: #2157A3 2px solid;
+    border-bottom: $main-color 2px solid;
 }
 
 .contacts{
@@ -214,19 +205,20 @@ header{
 
 .image-placeholder img{
     border: $main-color 2px solid;
+    
 }
 
 .image-border{
-    width: 677px;
-    height: 356px;
+    width: 647px;
+    height: 336px;
     position: absolute;
     z-index: 0;
     border: $main-color 2px solid;
 }
 
 .about-us-items img{
-    height: 356px;
-    width: 677px;
+    height: 346px;
+    width: 657px;
     position: relative;
     top: 42px;
     left: 55px;
@@ -382,6 +374,7 @@ header{
     display: flex;
     justify-content: center;
     gap: 92px;
+    // text-align: left;
 }
 
 .second-hall{
@@ -397,6 +390,11 @@ header{
 
 .first-hall p{
     font-family: Viaoda;
+    width: 550px;
+}
+
+.first-hall img{
+    text-align: left;
 }
 
 .hall-text-num{
@@ -469,7 +467,7 @@ footer{
     display: flex;
     justify-content: flex-start;
     background-image: url('../img/map.png');
-    padding-left: 30px;         // Добавляем комфортный отступ от левого края экрана
+    padding-left: 30px;
     align-items: center;  
     background-position: right center;
     background-repeat: no-repeat;
@@ -641,6 +639,15 @@ footer{
     margin-top: 6px;
     margin-bottom: 68px;   
 }
+
+// .menu-text-block-description{
+//     display: flex;
+// }
+
+// .buffet-dot{
+//     align-content: flex-end;
+    
+// }
 
 
 
@@ -830,6 +837,14 @@ p.description.menu-description-indent{
 .menu-cake img{
     width: 270px;
     height: 268px;
+    border-radius: 22px;
+}
+
+.menu-cake img:hover{
+    transform: scale(1.06);
+    box-shadow: 0 12px 28px rgba(38, 90, 162, 0.25);
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .menu-cake h4{
@@ -877,9 +892,17 @@ p.description.menu-description-indent{
 
 .menu-cake-weight button{
     background: none;
-    // text-decoration: none;
     border: none;
     cursor: pointer;
+}
+
+.menu-cake-weight-likes img{
+    border-radius: 0;
+}
+
+.menu-cake-weight-likes img:hover{
+    transform: none;
+    box-shadow: none;
 }
 
 .menu-cakes-big-block{
@@ -928,8 +951,57 @@ p.description.menu-description-indent{
 }
 
 
+// стили для тортов на заказ
 
+.about-us-image-border-order{
+    border: $main-color 3px solid;
+    width: 512px;
+    height: 332px;
+    position: absolute;
+}
 
+.image-order{
+    position: relative;
+    top: 47px;
+    left: 47px;
+}
+
+.menu-cakes-order-block-description{
+    max-width: 645px;
+    font-size: 28px;
+}
+
+.menu-cakes-order-block-description li{
+    margin-left: 30px;
+}
+
+.examples-of-works-title{
+    font-size: 42px;
+    text-align: left;
+    margin-top: 100px;
+}
+
+.examples-of-works-text{
+    margin-bottom: 100px;
+}
+
+.examples-of-works {
+    display: flex;
+    justify-content: center;
+    gap: 87px;
+}
+
+.examples-of-works img{
+    margin-bottom: 70px;
+    border-radius: 22px;
+}
+
+.examples-of-works img:hover{
+    transform: scale(1.06);
+    box-shadow: 0 12px 28px rgba(38, 90, 162, 0.25);
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
 
 
 
@@ -938,12 +1010,55 @@ p.description.menu-description-indent{
 
 
 // Стили для раздела о нас
+
+
+// .nav {
+//     position: relative;
+//     display: flex;
+//     align-items: center;
+// }
+
+.nav-links {
+    display: flex;
+    gap: 78px;
+    align-items: center;
+}
+
+// Бургер скрыт на десктопе
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+
+    span {
+        display: block;
+        width: 90%;
+        height: 2px;
+        background-color: $main-color;
+        border-radius: 2px;
+        transition: transform .3s ease, opacity .3s ease;
+        transform-origin: center;
+    }
+}
+
+
+
+
+
+
 .container-about-us{
     background: $background-color;
     color: $main-color;
     font-family: Viaoda;
-    // margin: 0 auto;
-    // text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .menu-title-items-img{
@@ -1049,27 +1164,35 @@ p.description.menu-description-indent{
 }
 
 .shops{
-    display: grid;
-    grid-template-columns: 301px 424px 277px;
-    gap: 131px;
-    border: $main-color 2px solid;
-    padding: 35px 84px;
-    // justify-content: center;
-    margin: 0 auto 137px auto;
-    box-sizing: border-box;
-    max-width: 1400px;
-    width: 90%;
-
+    display: flex;
+    justify-content: center;
 }
 
-.shops-title{
+table {
+    border: 2px solid $main-color;
+    border-collapse: separate;
+    box-sizing: border-box;
+    background-color: $background-color;
+    color: $main-color;
     font-family: Viaoda;
+    margin: 0 auto 137px auto;
+    padding: 35px 84px;
+    width: 100%;
+    max-width: 1600px; 
+}
+
+th, td {
+    border: none;
+    padding: 20px;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
     font-size: 36px;
     padding-bottom: 42px;
 }
-
-.shops-colum p{
-    font-family: Viaoda;
+td {
     font-size: 28px;
     padding-bottom: 26px;
 }
@@ -1079,6 +1202,11 @@ p.description.menu-description-indent{
     width: 609px;
     height: 612px;
 }
+
+.footer-map-mobile {
+    display: none;
+}
+
 
 
 
@@ -1140,7 +1268,8 @@ p.description.menu-description-indent{
 .modal-overlay {
     display: none;
     position: fixed;
-    top: 0; left: 0;
+    top: 0; 
+    left: 0;
     width: 100%; height: 100%;
     background: rgba(0, 0, 0, 0.5);
     justify-content: center;
@@ -1158,7 +1287,8 @@ p.description.menu-description-indent{
 
 .modal-close {
     position: absolute;
-    top: 10px; right: 15px;
+    top: 10px;
+    right: 15px;
     font-size: 30px;
     color: $main-color;
     cursor: pointer;
@@ -1170,4 +1300,1372 @@ p.description.menu-description-indent{
     font-size: 28px;
     color: $main-color;
     margin: 15px 0;
+}
+
+
+
+
+
+
+// Баннер
+
+.banner{
+    background-image: url('../img/баннер.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 549px;
+    padding-left: 130px;
+    background-position: center;
+}
+
+.banner p{
+    font-family: Viaoda;
+    font-size: 36px;
+    color: $background-color;
+    text-align: left;
+    align-content: center;
+    padding-top: 90px;
+    width: 750px;
+    text-transform: uppercase;
+}
+
+.banner-btn{
+    @extend .site-main-text-actions-call;
+    font-size: 20px;
+    padding: 8px 19px;
+    margin-top: 40px;
+    box-shadow: 2px 2px 5px 1px rgba(38, 90, 162, 0.55);
+    color: $background-color;
+    margin-right: 10px;
+}
+
+.banner-btn:hover{
+    background-color: rgba(255, 240, 233, 0.29);
+    transition: background-color 0.6s ease;
+}
+
+.banner-btn a{
+    color: $background-color;
+}
+
+.banner p,
+.banner-btn {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.banner p.fade-in-up,
+.banner-btn.fade-in-up {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-in-up {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+
+
+// Адаптация под мобильные устройства (iPhone 12: 390px)
+
+// для страницы О НАС
+@media (max-width: 480px) {
+
+
+    header {
+        padding: 12px 10px;
+        margin: 0;
+        display: flex;
+        height: 50px;
+    }
+
+    .nav {
+        // // display: flex;
+        // align-items: center;
+        // justify-content: space-between;
+        // // flex-wrap: nowrap;
+        // padding: 0 16px;
+        // gap: 12px;
+    }
+
+    .nav img{
+        height: 45px;
+    }
+
+    
+
+    
+
+    // Ссылки становятся выезжающей панелью
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 80%;
+        max-width: 320px;
+        height: 100vh;
+        background: $background-color;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 0;
+        padding: 80px 24px 24px;
+        box-sizing: border-box;
+        transform: translateX(100%);
+        transition: transform .3s ease;
+        z-index: 1000;
+        box-shadow: -4px 0 20px rgba(0, 0, 0, .15);
+        overflow-y: auto;
+
+        &.is-open {
+            transform: translateX(0);
+        }
+
+        a {
+            width: 100%;
+            font-size: 20px;
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(38, 90, 162, .2);
+            color: $main-color;
+            text-decoration: none;
+        }
+    }
+
+    // Контакты — остаются в шапке, сжимаются
+    .contacts {
+        display: flex;
+        align-items: center;
+        // align-content: center;
+        gap: 8px;
+        text-align: center;
+
+        button {
+            font-size: 11px;
+            padding: 1px 10px;
+            height: 26px;
+            border: $main-color 2px solid;
+        }
+
+        img {
+            height: 26px;
+            width: auto;
+            margin: auto 0;
+            align-content: center;
+            display: block;
+        }
+    }
+
+    // Бургер — справа, после контактов
+    .burger {
+        display: flex;
+        // flex-shrink: 0;
+        margin-left: 4px;
+    }
+
+    // Бургер → крестик
+    .burger.is-active {
+        span:nth-child(1) { transform: translateY(10.5px) rotate(45deg); }
+        span:nth-child(2) { opacity: 0; }
+        span:nth-child(3) { transform: translateY(-10.5px) rotate(-45deg); }
+        position: fixed;
+        top: 12px;
+        right: 16px;
+        margin: 0;
+        z-index: 1002;
+    }
+
+
+
+    // Блокировка скролла при открытом меню
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    .container-about-us {
+        overflow-x: hidden;
+    }
+
+    // ---------- Заголовок "О нас" ----------
+    .menu-title-items p {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .menu-title-items-img {
+        margin: 0 auto 40px auto;
+        width: 60%;
+        height: auto;
+    }
+
+    // ---------- Заголовки секций ----------
+    .about-us-titles {
+        font-size: 28px;
+        margin: 0 auto 32px auto;
+        padding-bottom: 8px;
+
+        &::after {
+            height: 2px;
+        }
+    }
+
+    // ---------- Текст ----------
+    .about-us-text-center {
+        font-size: 18px;
+        line-height: 1.4;
+        margin: 0 auto 24px auto;
+        max-width: 100%;
+        padding: 0 16px;
+        // text-align: justify;
+    }
+
+    .about-us-text-side {
+        max-width: 100%;
+        font-size: 18px;
+        line-height: 1.45;
+        padding: 0 16px;
+
+
+        li {
+            margin-left: 20px;
+            margin-bottom: 6px;
+        }
+
+        p {
+            margin-bottom: 12px;
+        }
+    }
+
+    .about-us-text-center_cooking {
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 32px;
+    }
+
+    // ---------- Блоки с фото (flex → column) ----------
+    .about-us-info-vostorg,
+    .about-us-info-coffee-bar {
+        flex-direction: column;
+        gap: 24px;
+        margin-bottom: 48px;
+        align-items: center;
+    }
+
+    // Обёртка картинки — сжимаем под контейнер
+    .about-us-image-vostorg {
+        width: 90%;
+        position: relative;
+        padding: 12px 0 0 12px; // место под рамку-смещение
+        box-sizing: border-box;
+    }
+
+    // Все рамки — единый размер под мобильный
+    .about-us-image-border-vostorg,
+    .about-us-image-border-coffee-bar,
+    .about-us-image-border-cooking,
+    .about-us-image-border-cake,
+    .about-us-image-border-meteor {
+        width: 90%;
+        height: 200px;
+        top: 0;
+        left: 0;
+        border: 2px solid $main-color;
+
+    }
+
+    // Картинки внутри рамок
+    .image-vostorg,
+    .image-coffee-bar {
+        position: relative;
+        top: 12px;
+        left: 12px;
+        right: auto;
+        margin-right: 0;
+        width: 100%;
+
+        img {
+            width: 90%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            border: 2px solid $main-color;
+        }
+    }
+
+    
+    .about-us-info-coffee-bar .about-us-image-vostorg {
+        padding: 12px 0 0 12px;
+    }
+
+    .about-us-info-coffee-bar .about-us-image-vostorg{
+        order: 1;
+    }
+
+    .about-us-info-coffee-bar-text{
+        order: 0;
+    }
+
+    .about-us-info-coffee-bar .image-coffee-bar {
+        right: auto;
+        margin-right: 0;
+    }
+
+    // ---------- Таблица магазинов ----------
+    .shops {
+        width: 100%;
+        // overflow-x: auto;
+        // -webkit-overflow-scrolling: touch;
+        margin-bottom: 48px;
+
+    }
+
+    table {
+        max-width: 600px;
+        padding: 12px 16px;
+        margin: 0 16px 48px 16px;
+        font-size: 14px;
+    }
+
+    th {
+        font-size: 14px;
+        padding: 10px 6px;
+        max-width: 107px;
+    }
+
+    td {
+        font-size: 10px;
+        padding: 10px 6px;
+        width: 100px;
+        // vertical-align: top;
+    }
+
+    // ---------- Разделитель ----------
+    .line-millet {
+        text-align: center;
+        // margin: 32px 0;
+
+        img {
+            width: 80%;
+            height: auto;
+        }
+    }
+
+    // ---------- Футер ----------
+    .footer-content {
+        background-image: none;
+        padding: 0;
+    }
+
+    .footer-info {
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+
+        img {
+            padding: 0;
+        }
+    }
+
+    .footer-info-title {
+        font-size: 22px;
+        margin: 16px 0;
+    }
+
+    .footer-info-text {
+        flex-direction: column;
+        gap: 16px;
+        padding-bottom: 35px;
+
+        p {
+            font-size: 18px;
+        }
+    }
+
+    .footer-info-text-connection-items {
+        font-weight: bold;
+        padding: 15px 0;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 24px;
+        text-align: center;
+    }
+
+    .footer-map-mobile {
+        display: block;
+        width: 90%;
+        max-width: 340px;
+        height: 90%;
+        margin: 16px auto;
+        border-radius: 8px;
+    }
+
+    .footer-bottom-text {
+        font-size: 13px;
+    }
+
+    .footer-bottom-social-network {
+        justify-content: center;
+        gap: 12px;
+
+        img {
+            height: 28px;
+        }
+    }
+
+    .footer-post-address {
+        width: 100%;
+        text-align: center;
+
+        p {
+            font-size: 14px;
+        }
+    }
+    // ---------- Модальное окно ----------
+    .modal-window {
+        width: 90%;
+        max-width: 300px;
+        padding: 24px 16px;
+
+        a {
+            font-size: 16px;
+            display: block;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+    }
+
+    .modal-close {
+        font-size: 28px;
+        top: 8px;
+        right: 12px;
+    }
+}
+
+
+
+
+// адаптация для основного раздела 
+
+@media (max-width: 480px) {
+    
+    .banner {
+        height: auto;
+        min-height: 420px;
+        padding: 40px 0 0 25px;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        box-sizing: border-box;
+
+        p {
+            width: 90%;
+            font-size: 18px;
+            line-height: 1.3;
+            text-align: left;
+            padding-top: 40px;
+            margin-bottom: 24px;
+        }
+    }
+
+    .banner-btn {
+        font-size: 15px;
+        padding: 5px 10px;
+        margin-top: 12px;
+        margin-right: 8px;
+        align-self: flex-start;
+    }
+
+    .site-main {
+        height: auto;
+        flex-direction: column;
+        gap: 0;
+        margin-bottom: 40px;
+        padding: 24px 16px 32px;
+        box-sizing: border-box;
+    }
+
+    // Скрываем большую картинку
+    .main-foto {
+        display: none;
+    }
+
+    .site-main-text {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        padding: 0;
+        min-width: 0;
+        margin-left: 0;
+    }
+    
+    .footnote {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 12px;
+        margin: 0 0 16px 18px;
+        margin-right: auto;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0 8px;
+        box-sizing: border-box;
+        width: auto; // ← убираем ограничение ширины
+
+        img {
+            height: 44px;
+            width: auto;
+            flex-shrink: 0;
+            display: block;
+        }
+
+        p {
+            font-size: 11px;
+            margin: 0;
+            text-align: left;
+            line-height: 1.3;
+            color: $background-color;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+    }
+
+    .site-main-text img {
+        width: 55%;
+        max-width: 220px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .site-main-text-p {
+        font-size: 14px;
+        margin-top: 16px;
+        text-align: center;
+        line-height: 1.4;
+    }
+
+    .site-main-text-actions {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+        align-items: center;
+
+        button {
+            width: 100%;
+            max-width: 260px;
+            font-size: 14px;
+            padding: 10px 14px;
+        }
+    }
+
+    // ---------- О нас ----------
+    .about-us {
+        padding: 32px 16px 48px;
+    }
+
+    .about-title p {
+        font-size: 30px;
+        margin-bottom: 16px;
+    }
+
+    .about-us-items {
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 24px;
+        align-items: center;
+
+        p {
+            font-size: 14px;
+            line-height: 1.45;
+            max-width: 100%;
+            text-align: left;
+        }
+    }
+
+    .about-us-items-image {
+        width: 100%;
+        max-width: 320px;
+        position: relative; // Создаем контекст для абсолютного позиционирования рамки
+        margin: 0 auto;
+    }
+
+    .image-border {
+        position: absolute; // ОБЯЗАТЕЛЬНО! Чтобы рамка была фоном
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 180px;
+        border: 2px solid $main-color;
+        z-index: 0;
+    }
+
+    .image-placeholder {
+        position: relative;
+        top: 12px;          // Смещение картинки вниз относительно рамки
+        left: 12px;         // Смещение картинки вправо относительно рамки
+        width: 100%;
+        z-index: 1; 
+
+        img {
+            position: static; 
+            top: auto;
+            left: auto;
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+            border: 2px solid $main-color;
+        }
+    }
+
+    .about-us button {
+        margin-top: 32px;
+        padding: 12px 32px;
+        font-size: 14px;
+    }
+
+    // ---------- Меню ----------
+    .menu {
+        padding: 32px 16px;
+    }
+
+    .menu-title p {
+        font-size: 32px;
+    }
+
+    .menu-changing > img {
+        width: 70%;
+        height: auto;
+        margin: 0 auto 16px;
+        display: block;
+    }
+
+    .menu-nav {
+        flex-wrap: wrap;
+        gap: 8px 16px;
+        font-size: 15px;
+        margin: 16px auto 24px;
+        justify-content: center;
+    }
+
+    .menu-nav-p {
+        padding-bottom: 4px;
+    }
+
+    .menu-images {
+        margin-top: 12px;
+        min-height: 0;
+    }
+
+    .menu-image.active {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .menu-image-case {
+        width: 100%;
+        max-width: 300px;
+        height: 316px;
+
+        img {
+            width: 100%;
+            height: auto;
+            max-height: 220px;
+            object-fit: cover;
+            border-radius: 18px;
+            margin-bottom: 8px;
+        }
+
+        h4 {
+            font-size: 17px;
+            padding-bottom: 4px;
+        }
+
+        p {
+            font-size: 13px;
+            line-height: 1.4;
+        }
+    }
+
+    .menu button {
+        margin-top: 24px;
+        font-size: 14px;
+        padding: 10px 28px;
+    }
+
+    // ---------- Узор ----------
+    .pattern {
+        padding-top: 16px;
+
+        img {
+            width: 80%;
+            height: auto;
+        }
+    }
+
+    // ---------- Наши залы ----------
+    .hall {
+        padding: 32px 16px 48px;
+    }
+
+    .hall-title {
+        font-size: 28px;
+        margin-bottom: 24px;
+
+        &::after {
+            width: 70%;
+            height: 2px;
+        }
+    }
+
+    .first-hall-text{
+        order: 2;
+    }
+
+    .first-hall img{
+        order: 3;
+    }
+
+    .first-hall,
+    .second-hall {
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .second-hall {
+        margin-top: 24px;
+    }
+
+    .first-hall img,
+    .second-hall img {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+    }
+
+    .first-hall-text,
+    .second-hall-text {
+        text-align: center;
+        width: 100%;
+    }
+
+    .first-hall p {
+        width: 100%;
+    }
+
+    .hall-text-num {
+        font-size: 32px;
+    }
+
+    .hall-text-title {
+        font-size: 22px;
+        padding: 4px 0 10px;
+    }
+
+    .hall-text-description {
+        font-size: 15px;
+        line-height: 1.4;
+    }
+
+    // ---------- Отзывы ----------
+    .feedback {
+        padding: 0 0 32px;
+    }
+
+    .feedback-title p {
+        font-size: 24px;
+        // margin-bottom: 20px;
+        padding: 0 16px;
+    }
+
+    .reviews-block-base {
+        flex-direction: column;
+        gap: 20px;
+        padding: 24px;
+    }
+
+    .reviews:not(:last-child)::after {
+        display: none;
+    }
+
+    .reviews {
+        border-bottom: 1px solid rgba($main-color, .2);
+        padding-bottom: 16px;
+    }
+
+    .reviews:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .stars img {
+        height: 16px;
+        width: auto;
+    }
+
+    .reviews-text {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        font-size: 13px;
+        line-height: 1.45;
+    }
+
+    .subtitle {
+        font-size: 13px;
+
+        h4 {
+            font-size: 14px;
+        }
+    }
+
+    // ---------- Разделитель ----------
+    .line-millet {
+        text-align: center;
+        padding: 16px 0;
+
+        img {
+            width: 70%;
+            height: auto;
+        }
+    }
+}
+
+
+
+// для страницы меню
+
+@media (max-width: 480px) {
+
+    // --- Общие контейнеры ---
+    .container-menu {
+        overflow-x: hidden;
+    }
+
+    .all-menu {
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
+
+    // --- Заголовок "Меню" ---
+    .menu-title-items {
+        padding-top: 32px;
+
+        p {
+            font-size: 32px;
+            line-height: 1.2;
+        }
+    }
+
+    .menu-title-items-img {
+        width: 60%;
+        margin: 0 auto 24px auto;
+    }
+
+    // --- Навигация меню (4 пункта) ---
+    .menu-nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px 16px;
+        margin: 16px auto 28px auto;
+        font-size: 15px;
+        justify-items: center;
+    }
+
+    .menu-nav-items {
+        padding-bottom: 4px;
+        text-align: center;
+    }
+
+    // выпадающее "Банкетное меню"
+    .nav-dropdown {
+        position: relative;
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: 220px;
+        max-width: 280px;
+        border-radius: 10px;
+        padding: 6px 0;
+        z-index: 50;
+        display: none;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, .2);
+    }
+
+    .nav-dropdown:focus-within .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu a {
+        font-size: 14px;
+        padding: 8px 14px;
+        white-space: normal;
+        line-height: 1.3;
+    }
+
+
+        // --- Фуршетное меню ---
+    #buffet.menu-content-info.active {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px 12px;
+    }
+
+    #banquet .menu-content-info-banquet-items {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #cakes.menu-content-info.active,
+    #coffee-bar.menu-content-info.active {
+        display: block;
+    }
+
+    .menu-content-info-left,
+    .menu-content-info-right {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 12px; // Отступ между блоками внутри колонки
+    }
+
+    // Уменьшаем текст
+    .menu-text-block {
+        width: 100%;
+
+        h3 {
+            font-size: 13px; // Заголовки категорий
+            margin-top: 8px;
+            margin-bottom: 4px;
+            line-height: 1.2;
+        }
+
+        p {
+            font-size: 10px; // Основной текст
+            line-height: 1.35;
+            white-space: normal;
+            margin-bottom: 8px;
+        }
+    }
+
+    .menu-subitem {
+        padding-left: 10px; // Уменьшаем отступ для подпунктов
+    }
+
+    // Уменьшаем фотографии
+    .menu-image-block,
+    .menu-image-block-right {
+        width: 100%;
+        text-align: center;
+
+        img {
+            width: 100%;
+            max-width: 100%;
+            height: 120px; // Фиксируем высоту, чтобы сетка была ровной
+            object-fit: cover; // Чтобы фото не искажались
+            border-radius: 8px;
+            margin: 4px 0 12px 0;
+        }
+    }
+
+    .menu-image-block-right img {
+        margin-top: 4px;
+        margin-bottom: 12px;
+    }
+
+    .buffet-dot{
+        display: none;
+    }
+    
+    .menu-text-block-weight{
+        display: block;
+        margin-left: auto;        // Прижимаем к правому краю
+        // white-space: nowrap;
+        flex-basis: 100%;         // Занимает 100% ширины контейнера
+        text-align: right;
+        font-weight: bold;
+
+    }
+
+
+
+
+
+
+
+
+
+    // --- Банкетное меню ---
+
+
+    .menu-cakes-block-title {
+        font-size: 24px;
+        margin: 24px 0;
+        // Разрешаем перенос, если текст длинный
+        flex-wrap: wrap;
+        text-align: center;
+        row-gap: 6px;
+
+        &::before,
+        &::after {
+            content: '';
+            flex: 1 1 16px;       // минимум 16px, растягивается
+            min-width: 16px;      // ← ключ: не даём схлопнуться в 0
+            height: 2px;
+            background-color: $main-color;
+            max-width: 40px;
+        }
+
+        &::before { margin-right: 10px; }
+        &::after  { margin-left: 10px;  }
+    }
+
+    .menu-roll-block-title {
+        font-size: 24px; // Немного уменьшаем, чтобы текст влез
+        max-width: 250px;
+        line-height: 1.3;
+        margin: 24px auto;
+        display: block; // Отключаем flex, чтобы управлять линиями вручную
+        position: relative;
+        text-align: center;
+        padding: 0 45px; // Оставляем место по бокам для линий
+
+        // Убираем старые псевдоэлементы
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%; // Идеальный центр по вертикали
+            transform: translateY(-50%); // Точное центрирование
+            width: 35px; // Длина линии
+            height: 2px;
+            background-color: $main-color;
+        }
+
+        // Левая линия
+        &::before {
+            left: 0;
+        }
+
+        // Правая линия
+        &::after {
+            right: 0;
+        }
+    }
+
+    
+
+        // --- Банкетное меню: 2 колонки в ряд ---
+    .menu-content-info-banquet-items {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr)); // 2 колонки
+        gap: 16px 12px; // отступы между колонками и строками
+        margin-bottom: 32px;
+        align-items: start;
+        text-align: left;
+    }
+
+    // Уменьшаем текстовые блоки
+    .menu-content-banquet-left,
+    .menu-content-banquet-right {
+        max-width: 100%;
+        width: 100%;
+        padding: 0;
+    }
+
+    .menu-item {
+        margin-bottom: 12px;
+    }
+
+    .menu-row .name,
+    .menu-row .menu-banquet-weight {
+        font-size: 11px; // Уменьшаем шрифт названий и веса
+        padding: 0 2px;
+    }
+
+    .menu-row .menu-banquet-weight {
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    .menu-row .text-dots {
+        font-size: 11px; 
+        letter-spacing: 1px;
+        min-width: 5px;
+        overflow: hidden;
+        color: $main-color;
+    }
+
+    .menu-item .description {
+        font-size: 9px; // Уменьшаем шрифт описания
+        padding-left: 2px;
+        line-height: 1.3;
+    }
+
+    .description.description-drinks-bread {
+        font-size: 10px;
+    }
+
+    p.description.menu-description-indent {
+        padding-left: 10px;
+    }
+
+    // Уменьшаем картинки
+    .menu-image-block-banquet-first,
+    .menu-image-block-banquet-last {
+        margin: 0 0 12px 0;
+        text-align: center;
+
+        img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px; // Чуть меньше скругление
+        }
+    }
+
+    .menu-image-block-garnish1 img,
+    .menu-image-block-garnish2 img {
+        margin: 0 auto 12px auto;
+        height: 120px; // Ограничиваем высоту
+        max-width: 100%;
+        object-fit: cover;
+        display: block;
+        border-radius: 8px;
+    }
+
+    .menu-image-block-banquet-hot img,
+    .image-cold1 img,
+    .image-cold2 img,
+    .menu-image-block-deserts1 img,
+    .menu-image-block-deserts2 img {
+        width: 100%;
+        max-width: 100%;
+        height: 120px; // Фиксируем высоту, чтобы сетка не ломалась
+        object-fit: cover;
+        margin: 12px auto;
+        display: block;
+        border-radius: 8px;
+    }
+    
+    // Специфичное выравнивание, если картинки идут в разных колонках
+    .menu-content-banquet-left,
+    .menu-content-banquet-right {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+
+        // --- Торты: карточки (по 2 в ряд) ---
+    .menu-cakes-block {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px 14px;
+        margin: 0 0 40px 0;
+        justify-content: center;
+    }
+
+    .menu-cake {
+        width: 100%;
+        max-width: 100%;
+        height: auto;              // убираем фикс. высоту 586px
+        position: relative;
+        padding-bottom: 50px;      // место под вес/лайк
+        box-sizing: border-box;
+
+        img {
+            width: 100%;
+            max-width: 100%;
+            height: 150px;          // одинаковая высота превью, чтобы карточки были ровными
+            object-fit: cover;
+            border-radius: 12px;
+            display: block;
+        }
+
+        h4 {
+            padding-top: 10px;
+            font-size: 15px;
+            line-height: 1.2;
+        }
+
+        span {
+            font-size: 11px;
+            line-height: 1.35;
+            display: block;
+            padding-top: 4px;
+        }
+    }
+
+    .menu-cake-weight {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        align-items: center;
+    }
+
+    .menu-cake-weight-number {
+        width: auto;
+        min-width: 0;
+        height: 28px;
+        font-size: 13px;
+        padding: 3px 8px;
+        box-sizing: border-box;
+        border-width: 1.5px;
+        align-content: center;
+    }
+
+    .menu-cake-weight-likes {
+        gap: 4px;
+        align-items: center;
+    }
+
+    .menu-cake-weight img {
+        width: 18px;
+        height: 16px;
+        border-radius: 0;
+    }
+
+    .menu-cake-weight-number-of-like {
+        font-size: 12px;
+    }
+
+    // --- Большие блоки тортов ---
+    .menu-cakes-big-block {
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 40px;
+        text-align: center;
+
+        img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            order: 0;
+        }
+    }
+
+
+    .menu-cakes-big-block-description {
+        padding-top: 0;
+        order: 1;
+
+        h3 {
+            font-size: 24px;
+        }
+
+        span {
+            font-size: 15px;
+            padding: 12px 0;
+            max-width: 100%;
+            display: block;
+        }
+    }
+
+    .menu-cake-weight-big {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .menu-cake-weight-likes button{
+        width: 20px;
+    }
+
+    // --- "Торты на заказ" ---
+    .menu-cakes-order-block-description {
+        max-width: 100%;
+        font-size: 15px;
+        text-align: left;
+        padding: 0 4px;
+
+        li {
+            margin-left: 20px;
+            margin-bottom: 4px;
+            text-align: left;
+        }
+    }
+
+    .examples-of-works-title {
+        font-size: 24px;
+        text-align: center;
+        margin-top: 60px;
+    }
+
+    .examples-of-works-text {
+        margin-bottom: 24px;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .about-us-image-border-order {
+        display: none;
+
+    }
+
+    .image-order {
+        display: none;
+    }
+
+    // --- Примеры работ ---
+    .examples-of-works {
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+        margin-top: 16px;
+        padding: 0 16px;
+
+        img {
+            width: 100%;
+            max-width: 340px;
+            height: auto;
+            margin-bottom: 0;
+        }
+    }
+
+    // --- Кофе-бар ---
+    .menu-content-info-cakes {
+        width: 100%;
+    }
+
+    // --- Футер: line-millet уже адаптирован, но подстрахуемся ---
+    .line-millet {
+        padding-bottom: 24px;
+
+        img {
+            width: 70%;
+            height: auto;
+        }
+    }
+
+    .modal-window {
+        width: 90%;
+        max-width: 320px;
+        padding: 24px 16px;
+
+        a {
+            font-size: 16px;
+            margin: 10px 0;
+            line-height: 1.3;
+        }
+    }
 }

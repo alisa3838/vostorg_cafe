@@ -4,26 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Кафе Восторг</title>
+    <link rel="icon" type="image/svg" href="img/logoKP.svg">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
-    <div class="container">
+    <div class="banner">
+        <p>Мы создаем события, которые хочется вспоминать.<br> Банкеты, фуршеты и уютные вечера.</p>
+        <button class="banner-btn">Узнать больше</button>
+        <button class="banner-btn">
+            <a href="tel:+73412432392">+7 341 243 23 92</a>
+        </button>
     </div>
     <header>
         <div class="nav">
             <img src="img/logoKP.svg" alt="Комбинат Питания - 2">
-            <a href="#">Главная</a>
-            <a href="#about-us">О нас</a>
-            <a href="#menu">Меню</a>
-            <a href="#feedback">Отзывы</a>
-            <a href="#footer">Контакты</a>
+            <div class="nav-links" id="nav-links">
+                <a href="#">Главная</a>
+                <a href="about-us.html">О нас</a>
+                <a href="menu.html">Меню</a>
+                <a href="#feedback">Отзывы</a>
+                <a href="#footer">Контакты</a>
+            </div>
         </div>
         <div class="contacts">
             <button class="open-call-modal">Позвонить</button>
             <a href="https://vk.ru/club92098046"><img src="img/vk3.svg" alt="ВКонтакте"></a>
             <a href="#"><img src="img/max3.svg" alt="Макс"></a>
         </div>
+        
+        <button class="burger" id="burger-btn" aria-label="Открыть меню" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
     <div class="container-background">
         <div class="site-main">
@@ -76,46 +90,46 @@
             <div class="menu-images">
                 <div class="menu-image active" id="buffet">
                     <div class="menu-image-case">
-                        <img src="img/фуршетноеМеню1.png" alt="Фуршетное меню">
-                        <p>Название</p>
-                        <p>Описание/состав</p>
+                        <img src="img/Пирожки1_меню.png" alt="Фуршетное меню">
+                        <h4>Пирожки изи цельнозерновой муки</h4>
+                        <p>С мясом, с зеленым луком, с картофелем и грибами, с капустой, с морковью, со свеклой.</p>
                     </div>
                     <div class="menu-image-case">
-                        <img src="img/фуршетноеМеню2.png" alt="Фуршетное меню">
-                        <p>Название</p>
-                        <p>Описание/состав</p>
+                        <img src="img/Пирожки2_меню.png" alt="Фуршетное меню">
+                        <h4>Пирожки печеные</h4>
+                        <p>Картофель, репчатый лук, сельдь, свежая зелень, помидоры Черри.</p>
                     </div>
                     <div class="menu-image-case">
-                        <img src="img/фуршетноеМеню3.png" alt="Фуршетное меню">
-                        <p>Название</p>
-                        <p>Описание/состав</p>
+                        <img src="img/Сельдь_меню.png" alt="Фуршетное меню">
+                        <h4>Картофель печеный с сельдью (на шпажке)</h4>
+                        <p>С мясом, мясо-капустные, с печенью, с капустой и яйцом, с грибами и картофелем, с зеленым луком, яйцом.</p>
                     </div>
                     <div class="menu-image-case">
-                        <img src="img/фуршетноеМеню4.png" alt="Фуршетное меню">
-                        <p>Название</p>
-                        <p>Описание/состав</p>
+                        <img src="img/Канапе_меню.png" alt="Фуршетное меню">
+                        <h4>Мини-канапе</h4>
+                        <p>Сыр ассорти, виноград, грецкий орех</p>
                     </div>
                 </div>
                 <div class="menu-image" id="banquet">
                     <div class="menu-image-case">
-                        <img src="img/фуршетноеМеню2.png" alt="Фуршетное меню">
-                        <p>Название</p>
-                        <p>Описание/состав</p>
+                        <img src="img/Цезарь_меню.png" alt="Фуршетное меню">
+                        <h4>Салат «Цезарь»</h4>
+                        <p>Курица, салат Айсберг, помидоры Черри, сыр, гренки, соус Цезарь.</p>
                     </div>
                     <div class="menu-image-case">
-                        <img src="img/фуршетноеМеню3.png" alt="Фуршетное меню">
-                        <p>Название</p>
-                        <p>Описание/состав</p>
+                        <img src="img/Кальмары_меню.png" alt="Фуршетное меню">
+                        <h4>Кальмары запеченные с овощями</h4>
+                        <p>Кальмары, помидоры, сладкий болгарский перец, кабачки, репчатый лук, чеснок, оливковое масло, лимонный сок, свежая зелень.</p>
                     </div>
                     <div class="menu-image-case">
-                        <img src="img/фуршетноеМеню4.png" alt="Фуршетное меню">
-                        <p>Название</p>
-                        <p>Описание/состав</p>
+                        <img src="img/Щука_меню.png" alt="Фуршетное меню">
+                        <h4>Щука фаршированная</h4>
+                        <p>Щука, репчатый лук, морковь, молоко, яйцо, сливочное масло, чеснок, соль, чёрный молотый перец, лимон, зелень, растительное масло.</p>
                     </div>
                     <div class="menu-image-case">
-                        <img src="img/фуршетноеМеню1.png" alt="Фуршетное меню">
-                        <p>Название</p>
-                        <p>Описание/состав</p>
+                        <img src="img/Штрудель_меню.png" alt="Фуршетное меню">
+                        <h4>Штрудель с мороженым и сиропом</h4>
+                        <p>Яблоки, слоёное тесто, сахар, корица, сливочное масло, изюм, грецкие орехи, сахарная пудра, ванильное мороженое, карамельный сироп.</p>
                     </div>
                 </div>
                 <div class="menu-image" id="cakes">
@@ -142,17 +156,17 @@
                 </div>
                 <div class="menu-image" id="coffee-bar">
                     <div class="menu-image-case">
-                        <img src="img/пирожное Дор Блю (1).jpg" alt="">
+                        <img src="img/Пирожное-Дор-Блю.jpg" alt="">
                         <h4>Пирожное Дор Блю с грушей</h4>
                         <p>Шоколадный бисквит, шоколадное суфле на основе взбитых сливок и крема Англез, в середине – шарик из желе с грушей и суфле с сыром Дор блю.</p>
                     </div>
                     <div class="menu-image-case">
-                        <img src="img/пирожное Очарование (1).jpg" alt="">
+                        <img src="img/Пирожное-Очарование.jpg" alt="">
                         <h4>Пирожное Очарование</h4>
                         <p>Поверхность покрыта гелем Черная смородина. На тонком шоколадном бисквите суфле на основе взбитых сливок с начинкой.</p>
                     </div>
                     <div class="menu-image-case">
-                        <img src="img/пирожное Парижанка.jpg" alt="">
+                        <img src="img/Пирожное-Парижанка.jpg" alt="">
                         <h4>Пирожное Парижанка</h4>
                         <p>Кольцо из заварного теста, с вишневой начинкой и кремом Патисьер.</p>
                     </div>
@@ -172,20 +186,20 @@
     <div class="hall">
         <p class="hall-title">Наши залы</p>
         <div class="first-hall">
-            <img src="img/вместоЗала.png" alt="Малый зал">
+            <img src="img/small-holl.png" alt="Малый зал">
             <div class="first-hall-text">
                 <p class="hall-text-num">01</p>
                 <p class="hall-text-title">Малый зал</p>
-                <p class="hall-text-description">Описание, количество человек и тд. <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt adipisci, veritatis laboriosam distinctio temporibus officia! Sit accusamus nostrum corporis sunt.</p>
+                <p class="hall-text-description">Светлый и уютный на 20 гостей.</p>
             </div>
         </div>
         <div class="second-hall">
             <div class="second-hall-text">
                 <p class="hall-text-num">02</p>
                 <p class="hall-text-title">Большой зал</p>
-                <p class="hall-text-description">Описание, количество человек и тд. <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt adipisci, veritatis laboriosam distinctio temporibus officia! Sit accusamus nostrum corporis sunt.</p>
+                <p class="hall-text-description">Современный и просторный 65 гостей.</p>
             </div>
-            <img src="img/вместоЗала.png" alt="Большой зал">
+            <img src="img/big-holl.png" alt="Большой зал">
         </div>
     </div>
     <div class="feedback" id="feedback">
@@ -232,7 +246,7 @@
         </div>    
     </div>
     <div class="line-millet">
-        <img src="img/millet.svg" alt="">
+        <img src="img/menu_line_blue.svg" alt="">
     </div>
     <footer id="footer">
         <div class="footer-content">
@@ -254,6 +268,7 @@
                     <div class="address">
                         <p class="footer-info-text-connection-items">Где мы находимся:</p>
                         <p>Удмуртская Республика, Ижевск, Песочная улица, 3</p>
+                        <img src="img/map.png" alt="Карта" class="footer-map-mobile">
                     </div>
                 </div>
                 <div class="footer-bottom">
@@ -281,16 +296,49 @@
 
 <script>
     $(document).ready(function() {
-        let autoSwitchInterval;
-        const switchDelay = 5000; // Интервал переключения: 4000 мс = 4 секунды
+
+        // ===== Бургер-меню =====
+        const $burger   = $('#burger-btn');
+        const $navLinks = $('#nav-links');
+
+        function closeMenu() {
+            $navLinks.removeClass('is-open');
+            $burger.removeClass('is-active').attr('aria-expanded', 'false');
+            $('body').removeClass('menu-open');
+        }
+
+        $burger.on('click', function() {
+            const isOpen = $navLinks.hasClass('is-open');
+            $navLinks.toggleClass('is-open', !isOpen);
+            $burger.toggleClass('is-active', !isOpen);
+            $burger.attr('aria-expanded', !isOpen);
+            $('body').toggleClass('menu-open', !isOpen);
+        });
+
+        // Закрыть при клике по ссылке
+        $navLinks.find('a').on('click', closeMenu);
+
+        // Закрыть при клике вне меню
+        $(document).on('click', function(e) {
+            if ($navLinks.hasClass('is-open')
+                && !$(e.target).closest('.nav-links').length
+                && !$(e.target).closest('.burger').length) {
+                closeMenu();
+            }
+        });
+
+
+
 
         // Функция переключения на следующий пункт
+        let autoSwitchInterval;
+        const switchDelay = 5000;
+        
         function switchToNext() {
             const $current = $('.menu-nav-p.active');
-            // Ищем следующий элемент, если его нет — берем первый
+            // Ищет след элемент
             const $next = $current.next('.menu-nav-p').length ? $current.next('.menu-nav-p') : $('.menu-nav-p').first();
             
-            // Имитируем клик, чтобы сработала вся ваша логика переключения
             $next.trigger('click');
         }
 
@@ -298,12 +346,6 @@
         function startAutoSwitch() {
             autoSwitchInterval = setInterval(switchToNext, switchDelay);
         }
-
-        // Сброс и перезапуск таймера (нужен при ручном клике)
-        // function resetAutoSwitch() {
-        //     clearInterval(autoSwitchInterval);
-        //     startAutoSwitch();
-        // }
 
         // Обработчик клика по пунктам меню
         $('.menu-nav-p').on('click', function() {
@@ -314,17 +356,14 @@
             $('.menu-image').removeClass('active');
             $('#' + targetId).addClass('active');
             
-            // Сбрасываем таймер при ручном переключении
-            // resetAutoSwitch();
         });
 
-        // Запускаем автопереключение при загрузке страницы
+        // автопереключение при загрузке страницы
         startAutoSwitch();
 
-        // Удобная фишка: ставим на паузу при наведении мыши на меню, чтобы пользователь мог спокойно читать
         $('.menu-changing').hover(
-            function() { clearInterval(autoSwitchInterval); }, // Мышь наведена -> пауза
-            function() { startAutoSwitch(); }                  // Мышь убрана -> продолжить
+            function() { clearInterval(autoSwitchInterval); }, // Мышь наведена - пауза
+            function() { startAutoSwitch(); }                  // Мышь убрана - продолжить
         );
 
         // --- Модальное окно с номером ---
@@ -339,6 +378,38 @@
         $('#call-modal').click(function(e) {
             if (e.target === this) $(this).hide();
         });
+
+
+        
+        
+    });
+    // баннер
+    document.addEventListener('DOMContentLoaded', function() {
+        const bannerText = document.querySelector('.banner p');
+        const bannerButtons = document.querySelectorAll('.banner-btn');
+
+        // Появление текста
+        setTimeout(() => {
+            if (bannerText) {
+                bannerText.classList.add('fade-in-up');
+            }
+        }, 200);
+
+        // 2. Появление кнопок
+        bannerButtons.forEach((button, index) => {
+            setTimeout(() => {
+                button.classList.add('fade-in-up');
+            }, 400 + (index * 200)); 
+        });
+    });
+
+    // для плавного премещения на раздел о нас
+    $('.banner-btn').first().on('click', function(e) {
+        e.preventDefault();
+        // Плавный скролл к блоку "about-us"
+        $('html, body').animate({
+            scrollTop: $('#about-us').offset().top - 110
+        }, 800);
     });
 </script>
 
@@ -347,7 +418,7 @@
         <span class="modal-close">&times;</span>
         <a href="tel:+73412432392">Кафе «Восторг» +7 (3412) 43 23 92</a>
         <a href="tel:+73412485972">Кондитерский цех +7 (3412) 48 59 72, </a><a href="tel:+73412485797">+7 (3412) 48 57 97</a>
-        <a href="tel:+73412917086">Соловая «Метеор» +7 (3412) 91 70 86</a>
+        <a href="tel:+73412917086">Столовая «Метеор» +7 (3412) 91 70 86</a>
     </div>
 </div>
 

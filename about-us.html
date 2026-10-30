@@ -8,22 +8,30 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
-    <div class="container-about-us">
-        <header>
-            <div class="nav">
-                <img src="img/logoKP.svg" alt="Комбинат Питания - 2">
-                <a href="index.html#site-main">Главная</a>
-                <a href="index.html#about-us">О нас</a>
-                <a href="index.html#menu">Меню</a>
+    <header>
+        <div class="nav">
+            <img src="img/logoKP.svg" alt="Комбинат Питания - 2">
+            <div class="nav-links" id="nav-links">
+                <a href="index.html">Главная</a>
+                <a href="#">О нас</a>
+                <a href="menu.html">Меню</a>
                 <a href="index.html#feedback">Отзывы</a>
                 <a href="#footer">Контакты</a>
             </div>
-            <div class="contacts">
-                <button id="open-call-modal">Позвонить</button>
-                <a href="https://vk.ru/club92098046"><img src="img/vk3.svg" alt="ВКонтакте"></a>
-                <a href="#"><img src="img/max3.svg" alt="Макс"></a>
-            </div>
-        </header>
+        </div>
+        <div class="contacts">
+            <button id="open-call-modal">Позвонить</button>
+            <a href="https://vk.ru/club92098046"><img src="img/vk3.svg" alt="ВКонтакте"></a>
+            <a href="#"><img src="img/max3.svg" alt="Макс"></a>
+        </div>
+        
+        <button class="burger" id="burger-btn" aria-label="Открыть меню" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+    <div class="container-about-us">
         <div class="menu-title-items">
             <p>О нас</p>
         </div>
@@ -65,7 +73,7 @@
                     <img src="img/Кофе-бар.png" alt="КафеВосторгФотоЗала">
                 </div>
             </div>
-            <div class="about-us-text-side">
+            <div class="about-us-text-side about-us-info-coffee-bar-text">
                 <p>В вестибюле кафе «Восторг» расположился уютный кофе-бар, в котором Вы можете отдохнуть от городской суеты за чашечкой ароматного кофе с изысканным десертом.
                     <br>Кофе-бар работает ежедневно с 07.00 до 19.00.<br> Перерывы с 10.30 до 11.00 и с 15.30 до 16.00.
                 </p>
@@ -83,7 +91,7 @@
             <div class="about-us-image-vostorg">
                 <div class="about-us-image-border-cooking"></div>
                 <div class="image-vostorg">
-                    <img src="img/вместоЗала.png" alt="КафеВосторгФотоЗала">
+                    <img src="img/Кулинария.png" alt="КафеВосторгФотоЗала">
                 </div>
             </div>
         </div>
@@ -107,60 +115,89 @@
             <div class="about-us-image-vostorg">
                 <div class="about-us-image-border-cake"></div>
                 <div class="image-vostorg">
-                    <img src="img/купольские_торты.png" alt="КафеВосторгФотоЗала">
+                    <img src="img/Купольские_торты.png" alt="КафеВосторгФотоЗала">
                 </div>
             </div>
         </div>
         <p class="about-us-text-center">Для Вашего удобства наши торты можно приобрести и в магазинах, расположенных в самых разных точках города:</p>
         <div class="shops">
-            <div class="shops-colum">
-                <h4 class="shops-title">Магазин</h4>
-                <p>ТЦ "Юбилейный"</p>
-                <p>М-н "Кот в сапогах"</p>
-                <p>ТЦ "На Песочной"</p>
-                <p>М-н "Сказка"</p>
-                <p>М-н "Гамбринус"</p>
-                <p>ТЦ "Каравай"</p>
-                <p>ТЦ "Северный рынок"</p>
-                <p>М-н "Любимые продукты"</p>
-                <p>М-н "Универсам №24"</p>
-                <p>М-н "Экорынок"</p>
-                <p>М-н "Экорынок"</p>
-                <p>М-н "Экорынок"</p>
-                <p>ТЦ «Московский» </p>
-            </div>
-            <div class="shops-colum">
-                <h4 class="shops-title">Адрес</h4>
-                <p>г. Ижевск, ул. Воткинское шоссе, 58</p>
-                <p>г. Ижевск, ул. Ленина, 112</p>
-                <p>г. Ижевск, ул. Песочная, 6</p>
-                <p>г. Ижевск, ул. Майская, 7</p>
-                <p>г. Ижевск, ул. Дарьинская, 1</p>
-                <p>г. Ижевск, ул. Тимирязева, 5а</p>
-                <p>г. Ижевск, ул. 9е Января, 223</p>
-                <p>г. Ижевск, ул. Красная, 131</p>
-                <p>г. Ижевск, ул. Орджоникидзе, 47</p>
-                <p>с. Октябрьский, ул. Ракетная, 24</p>
-                <p>г. Ижевск, ул. Азина, 152</p>
-                <p>с. Октябрьский, ул. Полесская, 2</p>
-                <p>г. Ижевск, ул. Гагарина, 49б</p>
-            </div>
-            <div class="shops-colum">
-                <h4 class="shops-title">Режим работы</h4>
-                <p>08.00-20.00 ежедневно</p>
-                <p>09.00-20.00 ежедневно</p>
-                <p>09.00-20.00 ежедневно</p>
-                <p>08.00-21.00 ежедневно</p>
-                <p>09.00-21.00 ежедневно</p>
-                <p>09.00-21.00 ежедневно</p>
-                <p>08.30-20.00 ежедневно</p>
-                <p>08.00-22.00 ежедневно</p>
-                <p>09.00-21.00 ежедневно</p>
-                <p>09.00-21.00 ежедневно</p>
-                <p>09.00-20.00 ежедневно</p>
-                <p>09.00-21.00 ежедневно</p>
-                <p>09.00-20.00 ежедневно</p>
-            </div>
+            <table>
+                <tr>
+                    <th>Магазин, отдел</th>
+                    <th>Адрес</th>
+                    <th>Режим работы</th>
+                </tr>
+                <tr>
+                    <td>М-н «Экорынок»,<br> «Скатерть самобранка»</td>
+                    <td>ул. Клубная, 24</td>
+                    <td>9<sup>00</sup> - 21<sup>00</sup> ежедневно</td>
+                </tr>
+                <tr>
+                    <td>М-н «Кот в сапогах»</td>
+                    <td>ул. Ленина, 112</td>
+                    <td>9<sup>00</sup> - 20<sup>00</sup> ежедневно</td>
+                </tr>
+                <tr>
+                    <td>М-н «Экорынок», «Карамелька»</td>
+                    <td>ул. Ленина, 166</td>
+                    <td>9<sup>00</sup> - 21<sup>00</sup> ежедневно</td>
+                </tr>
+                <tr>
+                    <td>М-н «Продукты»</td>
+                    <td>ул. Ракетная, 24</td>
+                    <td>9<sup>00</sup> - 19<sup>00</sup> ежедневно</td>
+                </tr>
+                <tr>
+                    <td>Крайский рынок,<br> «Кондитерский отдел»</td>
+                    <td>ул. Орджоникидзе, 40</td>
+                    <td>9<sup>00</sup> - 21<sup>00</sup> ежедневно</td>
+                </tr>
+                <tr>
+                    <td>ООО «Любимые продукты»</td>
+                    <td>ул. Красная, 64</td>
+                    <td>8<sup>00</sup> - 22<sup>00</sup> ежедневно</td>
+                </tr>
+                <tr>
+                    <td>ТЦ «Гранат», «Карамелька»</td>
+                    <td>ул. Ворошилова, 44</td>
+                    <td>9<sup>00</sup> - 21<sup>00</sup> ежедневно</td>
+                </tr>
+                <tr>
+                    <td>М-н «Петровка33»</td>
+                    <td>ул. Петрова, 33</td>
+                    <td>9<sup>00</sup> - 21<sup>00</sup> ежедневно</td>
+                </tr>
+                <tr>
+                    <td>М-н «Огонёк»</td>
+                    <td>ул. Петрова, 3</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>М-н «Лакомка», вход «Ижмолоко»</td>
+                    <td>ул. Берша, 43</td>
+                    <td>8<sup>30</sup> - 21<sup>00</sup> ежедневно</td>
+                </tr>
+                <tr>
+                    <td>М-н «Карамелька»</td>
+                    <td>ул. Берша, 44</td>
+                    <td>9<sup>00</sup> - 21<sup>00</sup> ежедневно</td>
+                </tr>
+                <tr>
+                    <td>М-н «Юбилейный», «Карамелька»</td>
+                    <td>ул. Воткинское шоссе, 58</td>
+                    <td>9<sup>00</sup> - 21<sup>00</sup> ежедневно</td>
+                </tr>
+                <tr>
+                    <td>М-н «Экорынок»,<br> Кондитерский отдел «Сладушка»</td>
+                    <td>ул. Азина, 152</td>
+                    <td>9<sup>00</sup> - 21<sup>00</sup> ежедневно</td>
+                </tr>
+                <tr>
+                    <td>М-н «Экорынок»</td>
+                    <td>ул. Гагарина, 49</td>
+                    <td></td>
+                </tr>
+            </table>
         </div>
         <div class="about-us-titles-wrapper">
             <p class="about-us-titles">Столовая «Метеор»</p>
@@ -187,54 +224,87 @@
         </div>
         <p class="about-us-text-center_cooking">Забронировать зал для своего торжества, а также заказать пироги и блюда можно сделать по телефону<br> +7 (3412) 91-70-86</p>
         <div class="line-millet">
-            <img src="img/millet.svg" alt="">
+            <img src="img/menu_line_blue.svg" alt="">
         </div>
-        <footer id="footer">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <img src="img/logoKP.svg" alt="">
-                    <p class="footer-info-title">Наши контакты</p>
-                    <div class="footer-info-text">
-                        <div class="footer-info-text-connection">
-                            <p class="footer-info-text-connection-items">Связь</p>
-                            <p>43-23-92 <br> +7 (3412) 48-02-91 <br> +7 (3412) 43-23-92</p>
-                        </div>
-                        <div class="time">
-                            <p class="footer-info-text-connection-items">Время работы:</p>
-                            <p>Пн-Пт 10:00 - 18:00 <br> Сб-Вс Выходной</p>
-                        </div>
-                        <div class="address">
-                            <p class="footer-info-text-connection-items">Где мы находимся:</p>
-                            <p>Удмуртская Республика, Ижевск, Песочная улица, 3</p>
-                        </div>
+    </div>
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <img src="img/logoKP.svg" alt="">
+                <p class="footer-info-title">Наши контакты</p>
+                <div class="footer-info-text">
+                    <div class="footer-info-text-connection">
+                        <p class="footer-info-text-connection-items">Связь</p>
+                        <p>43-23-92 <br> +7 (3412) 48-02-91 <br> +7 (3412) 43-23-92</p>
                     </div>
-                    <div class="footer-bottom">
-                        <div class="footer-bottom-text">
-                            <p>Все права защищены</p>
-                            <p>© 2026 cafevostorg.ru</p>
-                        </div>
-                        <div class="footer-bottom-social-network">
-                            <a href="https://vk.ru/club92098046"><img src="img/vkWihite.svg" alt="ВКонтакте"></a>
-                            <a href="#"><img src="img/maxWhite.svg" alt="Макс"></a>
-                            <img src="img/почта.svg" alt="почта" class="footer-post">
-                            <div class="footer-post-address">
-                                <a href="mailto:vostorg@kp2-kupol.ru">
-                                    <p>vostorg@kp2-kupol.ru</p>
-                                </a>
-                                <a href="mailto:meteor@kp2-kupol.ru">
-                                    <p>meteor@kp2-kupol.ru</p>
-                                </a>
-                            </div>
+                    <div class="time">
+                        <p class="footer-info-text-connection-items">Время работы:</p>
+                        <p>Пн-Пт 10:00 - 18:00 <br> Сб-Вс Выходной</p>
+                    </div>
+                    <div class="address">
+                        <p class="footer-info-text-connection-items">Где мы находимся:</p>
+                        <p>Удмуртская Республика, Ижевск, Песочная улица, 3</p>
+                        <img src="img/map.png" alt="Карта" class="footer-map-mobile">
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="footer-bottom-text">
+                        <p>Все права защищены</p>
+                        <p>© 2026 cafevostorg.ru</p>
+                    </div>
+                    <div class="footer-bottom-social-network">
+                        <a href="https://vk.ru/club92098046"><img src="img/vkWihite.svg" alt="ВКонтакте"></a>
+                        <a href="#"><img src="img/maxWhite.svg" alt="Макс"></a>
+                        <img src="img/почта.svg" alt="почта" class="footer-post">
+                        <div class="footer-post-address">
+                            <a href="mailto:vostorg@kp2-kupol.ru">
+                                <p>vostorg@kp2-kupol.ru</p>
+                            </a>
+                            <a href="mailto:meteor@kp2-kupol.ru">
+                                <p>meteor@kp2-kupol.ru</p>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </footer>
-    </div>
+        </div>
+    </footer>
+ 
+    
 
 
 <script>
     $(document).ready(function() {
+
+        // ===== Бургер-меню =====
+        const $burger   = $('#burger-btn');
+        const $navLinks = $('#nav-links');
+
+        function closeMenu() {
+            $navLinks.removeClass('is-open');
+            $burger.removeClass('is-active').attr('aria-expanded', 'false');
+            $('body').removeClass('menu-open');
+        }
+
+        $burger.on('click', function() {
+            const isOpen = $navLinks.hasClass('is-open');
+            $navLinks.toggleClass('is-open', !isOpen);
+            $burger.toggleClass('is-active', !isOpen);
+            $burger.attr('aria-expanded', !isOpen);
+            $('body').toggleClass('menu-open', !isOpen);
+        });
+
+        // Закрыть при клике по ссылке
+        $navLinks.find('a').on('click', closeMenu);
+
+        // Закрыть при клике вне меню
+        $(document).on('click', function(e) {
+            if ($navLinks.hasClass('is-open')
+                && !$(e.target).closest('.nav-links').length
+                && !$(e.target).closest('.burger').length) {
+                closeMenu();
+            }
+        });
 
         // для модального окна
         $('#open-call-modal').click(function() {
@@ -256,7 +326,7 @@
         <span class="modal-close">&times;</span>
         <a href="tel:+73412432392">Кафе «Восторг» +7 (3412) 43 23 92</a>
         <a href="tel:+73412485972">Кондитерский цех +7 (3412) 48 59 72, </a><a href="tel:+73412485797">+7 (3412) 48 57 97</a>
-        <a href="tel:+73412917086">Соловая «Метеор» +7 (3412) 91 70 86</a>
+        <a href="tel:+73412917086">Столовая «Метеор» +7 (3412) 91 70 86</a>
     </div>
 </div>
 </body>
